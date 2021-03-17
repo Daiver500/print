@@ -1,37 +1,29 @@
 {
-  "name": "appartment",
+  "name": "print",
   "private": true,
-  "destinations": "Личный проект",
+  "description": "Личный проект Печатные платы",
   "devDependencies": {
-    "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "9.8.4",
-    "browser-sync": "^2.26.14",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
+    "browser-sync": "^2.26.10",
+    "gulp": "4.0.2",
     "gulp-csso": "^4.0.1",
-    "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "1.2.1",
     "gulp-postcss": "8.0.0",
-    "gulp-posthtml": "^3.0.5",
-    "gulp-rename": "^2.0.0",
     "gulp-sass": "4.1.0",
     "gulp-sourcemaps": "2.6.5",
-    "gulp-svgstore": "^7.0.1",
     "gulp-webp": "^4.0.1",
-    "imagemin": "^7.0.1",
-    "node-sass": "^5.0.0",
-    "posthtml-include": "^1.4.3",
+    "jshint": "^2.12.0",
     "stylelint": "13.6.1",
-    "stylelint-config-htmlacademy": "0.1.4"
+    "stylelint-config-standard": "^21.0.0"
   },
   "scripts": {
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp build",
+    "build": "gulp styles",
     "start": "gulp"
   },
-  "browsersdestinations": [
+  "browserslist": [
     "last 2 versions",
     "not dead",
     "not ie <= 11"
