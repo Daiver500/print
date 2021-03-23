@@ -6,6 +6,11 @@
   color: $blue;
 }
 
+.navigation__inner,
+.information__inner {
+  display: flex;
+}
+
 .information__image {
   width: 705px;
   height: 515px;

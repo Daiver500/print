@@ -50,7 +50,7 @@ body {
 .container {
   max-width: 1920px;
   margin: 0 auto;
-  padding: 0 5px; }
+  padding: 0 10px; }
 
 @media (max-width: 1023px) {
   .container {
@@ -372,6 +372,10 @@ template {
 .navigation__logo svg {
   color: #00B2FF; }
 
+.navigation__inner,
+.information__inner {
+  display: flex; }
+
 .information__image {
   width: 705px;
   height: 515px; }
@@ -379,6 +383,14 @@ template {
 .about__image {
   width: 220px;
   height: 317px; }
+
+.form {
+  background-color: #00B2FF;
+  display: flex; }
+
+.form__image {
+  width: 511px;
+  height: 288px; }
 
 .social__date {
   display: none; }
