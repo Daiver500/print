@@ -366,8 +366,15 @@ template {
 [hidden] {
   display: none; }
 
+.header {
+  background-image: url("../../img/startbg.jpg"); }
+
 .navigation__logo svg {
   color: #00B2FF; }
+
+.information__image {
+  width: 705px;
+  height: 515px; }
 
 .about__image {
   width: 220px;
