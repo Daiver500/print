@@ -366,4 +366,22 @@ template {
 [hidden] {
   display: none; }
 
+.navigation__logo svg {
+  color: #00B2FF; }
+
+.about__image {
+  width: 220px;
+  height: 317px; }
+
+.social__date {
+  display: none; }
+
+.map__button,
+.contacts__button {
+  display: none; }
+
+.modal,
+.modalsuccess {
+  display: none; }
+
 /*# sourceMappingURL=style.css.map */
