@@ -48,7 +48,8 @@ img {
 body {
   font-family: "PTMono", "Arial", sans-serif;
   font-size: 16px;
-  line-height: 24px; }
+  line-height: 24px;
+  font-weight: 400; }
 
 .container {
   max-width: 1920px;
@@ -608,9 +609,46 @@ template {
   bottom: 141px;
   right: 565px; }
 
+.advantages {
+  margin-bottom: 110px; }
+
 .advantages__inner {
   margin-top: 108px;
-  max-width: 1170px; }
+  max-width: 1170px;
+  position: relative; }
+
+.advantages__imagewrapper {
+  position: relative;
+  max-width: 636px; }
+
+.advantages__polygon {
+  position: absolute;
+  top: 165px;
+  left: 85%;
+  transform: translateX(-50%);
+  width: 636px;
+  height: 636px; }
+
+.advantages__inner::before,
+.advantages__inner::after {
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 298px;
+  height: 298px; }
+
+.advantages__inner::before {
+  content: "";
+  left: -151px;
+  top: -73px;
+  background-image: url("../img/advantagespolygon.svg"); }
+
+.advantages__inner::after {
+  content: "";
+  right: -340px;
+  bottom: 0;
+  background-image: url("../img/advantagespolygon.svg");
+  transform: rotate(180deg); }
 
 .advantages__list {
   list-style: none;
@@ -625,11 +663,15 @@ template {
   border: 1px solid #EBEBEB;
   border-left: 1px solid #00B2FF;
   cursor: pointer;
-  position: relative; }
+  position: relative;
+  padding: 40px 42px 49px 44px; }
 
 .advantages__item:hover,
 .advantages__item:focus {
   background-color: #00B2FF; }
+
+.advantages__wrapper svg {
+  color: #00B2FF; }
 
 .advantages__item:hover p,
 .advantages__item:focus p,
@@ -654,12 +696,168 @@ template {
   line-height: 22px;
   color: #666666; }
 
-.advantages__wrapper svg {
-  color: #00B2FF; }
+.advantages__dot1,
+.advantages__dot2,
+.advantages__dot3 {
+  width: 10px;
+  height: 10px;
+  background: #F2F2F2;
+  border-radius: 50%;
+  position: absolute; }
+
+.advantages__dot1 {
+  top: 418px;
+  right: -225px; }
+
+.advantages__dot2 {
+  top: 173px;
+  right: 194px; }
+
+.advantages__dot3 {
+  top: 662px;
+  right: 197px; }
+
+.about {
+  margin-bottom: 110px; }
+
+.about__inner {
+  display: flex;
+  max-width: 1216px;
+  justify-content: space-between;
+  position: relative; }
+
+.about__inner::before {
+  content: "";
+  position: absolute;
+  left: -522px;
+  top: -320px;
+  width: 727px;
+  height: 636px;
+  background-image: url(../img/advantagespolygonbig.svg);
+  transform: rotate(180deg); }
+
+.about__title,
+.about__text {
+  margin-top: 0;
+  color: #666666; }
+
+.about__title {
+  margin-bottom: 18px;
+  font-family: RobotoCondensed;
+  font-size: 36px;
+  line-height: 51px; }
+
+.about__text {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 22px; }
+
+.about__button {
+  text-transform: uppercase;
+  padding: 14px 45px;
+  font-family: RobotoCondensed;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  border-color: #00B2FF;
+  color: #00B2FF;
+  background-color: inherit;
+  border-radius: 10px;
+  cursor: pointer; }
+
+.about__button:hover,
+.about__button:focus {
+  background-color: #00B2FF;
+  color: #ffffff; }
 
 .about__image {
   width: 220px;
   height: 317px; }
+
+.about__dot1,
+.about__dot2,
+.about__dot3 {
+  width: 10px;
+  height: 10px;
+  background: #F2F2F2;
+  border-radius: 50%;
+  position: absolute; }
+
+.about__dot1 {
+  top: -237px;
+  left: -40px; }
+
+.about__dot2 {
+  top: 307px;
+  left: -39px; }
+
+.about__dot3 {
+  top: 35px;
+  left: -510px; }
+
+.catalog {
+  background-color: #1B2D37; }
+
+.catalog__inner {
+  max-width: 1200px;
+  padding-top: 97px;
+  padding-bottom: 123px; }
+
+.catalog__title {
+  margin-top: 0;
+  margin-bottom: 47px;
+  font-family: RobotoCondensed;
+  font-size: 36px;
+  line-height: 51px;
+  color: #ffffff; }
+
+.catalog__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-left: 0;
+  grid-gap: 30px; }
+
+.catalog__item {
+  max-height: 625px;
+  position: relative; }
+
+.catalog__item::after {
+  content: "";
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  width: 8px;
+  height: 9px;
+  background-image: url("../img/corner.svg");
+  background-repeat: no-repeat; }
+
+.catalog__item img {
+  opacity: 0.2; }
+
+.catalog__item:hover,
+.catalog__item:focus {
+  opacity: 0.6; }
+
+.catalog__text {
+  position: absolute;
+  top: 53px;
+  left: 44px; }
+
+.catalog__link span {
+  font-family: RobotoCondensed;
+  font-size: 20px;
+  line-height: 30px;
+  max-width: 160px; }
+
+.catalog__button {
+  width: 63px;
+  height: 63px;
+  background-color: #00B2FF;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: none; }
 
 .form {
   background-color: #00B2FF;

@@ -1,4 +1,90 @@
+.about {
+  margin-bottom: 110px;
+}
+
+.about__inner {
+  display: flex;
+  max-width: 1216px;
+  justify-content: space-between;
+  position: relative;
+}
+
+.about__inner::before {
+  content: "";
+  position: absolute;
+  left: -522px;
+  top: -320px;
+  width: 727px;
+  height: 636px;
+  background-image: url(../img/advantagespolygonbig.svg);
+  transform: rotate(180deg);
+}
+
+.about__title,
+.about__text {
+  margin-top: 0;
+  color: $light-grey;
+}
+
+.about__title {
+  margin-bottom: 18px;
+  font-family: RobotoCondensed;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.about__text {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.about__button {
+  text-transform: uppercase;
+  padding: 14px 45px;
+  font-family: RobotoCondensed;
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 700;
+  border-color: $blue;
+  color: $blue;
+  background-color: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.about__button:hover,
+.about__button:focus {
+  background-color: $blue;
+  color: $white;
+}
+
 .about__image {
   width: 220px;
   height: 317px;
+}
+
+.about__dot1,
+.about__dot2,
+.about__dot3 {
+  width: 10px;
+  height: 10px;
+  background: $super-light-grey;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.about__dot1 {
+  top: -237px;
+  left: -40px;
+}
+
+.about__dot2 {
+  top: 307px;
+  left: -39px;
+}
+
+.about__dot3 {
+  top: 35px;
+  left: -510px;
 }
