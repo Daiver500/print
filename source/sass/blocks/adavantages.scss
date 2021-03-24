@@ -26,7 +26,9 @@
 }
 
 .advantages__item:hover p,
-.advantages__item:focus p {
+.advantages__item:focus p,
+.advantages__wrapper:hover svg,
+.advantages__wrapper:focus svg {
   color: $white;
 }
 
@@ -48,4 +50,8 @@
   font-size: 16px;
   line-height: 22px;
   color: $light-grey;
+}
+
+.advantages__wrapper svg {
+  color: $blue;
 }

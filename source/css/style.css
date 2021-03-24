@@ -632,7 +632,9 @@ template {
   background-color: #00B2FF; }
 
 .advantages__item:hover p,
-.advantages__item:focus p {
+.advantages__item:focus p,
+.advantages__wrapper:hover svg,
+.advantages__wrapper:focus svg {
   color: #ffffff; }
 
 .advantages__title,
@@ -651,6 +653,9 @@ template {
   font-size: 16px;
   line-height: 22px;
   color: #666666; }
+
+.advantages__wrapper svg {
+  color: #00B2FF; }
 
 .about__image {
   width: 220px;
