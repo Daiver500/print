@@ -1,0 +1,111 @@
+.header {
+  background-image: url("../../img/startbg.jpg");
+  background-color: $grey;
+}
+
+.navigation {
+  padding-top: 40px;
+  padding-bottom: 173px;
+}
+
+.navigation__inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1411px;
+}
+  
+
+.navigation__logo svg,
+.navigation__logo {
+  color: $blue;
+  width: 52px;
+  height: 52px;
+}
+
+.navigation__logowrapper {
+  display: flex;
+}
+
+.navigation__textmain {
+  padding-left: 16px;
+}
+
+.navigation__logotext,
+.navigation__logoheader {
+  margin: 0;
+}
+
+.navigation__logoheader {
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  color: $white;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.navigation__logotext {
+  font-family: RobotoCondensed;
+  font-weight: 500;
+  color: $grey;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.navigation__contacts {
+  display: flex;
+  align-items: center;
+  padding-right: 70px;
+}
+
+.navigation__link {
+  font-size: 16px;
+  line-height: 18px;
+  position: relative;
+}
+
+.navigation__link-mail {
+  padding-right: 122px;
+}
+
+.navigation__link-tel {
+  padding-right: 38px;
+}
+
+.navigation__button {
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  color: $white;
+  font-size: 14px;
+  line-height: 16px;  
+  padding: 14px;
+  background-color: inherit;
+  border-color: $white;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.navigation__link-tel::before,
+.navigation__link-mail::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+}
+
+.navigation__link-tel::before {
+  content: "";
+  left: -40px;
+  top: -2px;
+  width: 24px;
+  height: 27px;
+  background-image: url("../img/phone.svg");
+}
+
+.navigation__link-mail::before {
+  content: "";
+  left: -40px;
+  top: -2px;
+  width: 24px;
+  height: 27px;
+  background-image: url("../img/email.svg");
+}

@@ -8,7 +8,7 @@
 
 /* roboto - condensed - latin_cyrillic */
 @font-face {
-  font-family: "MullerMedium";
+  font-family: "RobotoCondensed";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -28,7 +28,10 @@ a {
   text-decoration: none; }
 
 a:link {
-  color: #000000; }
+  color: #ffffff; }
+
+a:visited {
+  color: #ffffff; }
 
 *,
 *::before,
@@ -367,18 +370,194 @@ template {
   display: none; }
 
 .header {
-  background-image: url("../../img/startbg.jpg"); }
+  background-image: url("../../img/startbg.jpg");
+  background-color: #788891; }
 
-.navigation__logo svg {
-  color: #00B2FF; }
+.navigation {
+  padding-top: 40px;
+  padding-bottom: 173px; }
 
-.navigation__inner,
-.information__inner {
+.navigation__inner {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1411px; }
+
+.navigation__logo svg,
+.navigation__logo {
+  color: #00B2FF;
+  width: 52px;
+  height: 52px; }
+
+.navigation__logowrapper {
   display: flex; }
+
+.navigation__textmain {
+  padding-left: 16px; }
+
+.navigation__logotext,
+.navigation__logoheader {
+  margin: 0; }
+
+.navigation__logoheader {
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 25px;
+  line-height: 29px; }
+
+.navigation__logotext {
+  font-family: RobotoCondensed;
+  font-weight: 500;
+  color: #788891;
+  font-size: 12px;
+  line-height: 14px; }
+
+.navigation__contacts {
+  display: flex;
+  align-items: center;
+  padding-right: 70px; }
+
+.navigation__link {
+  font-size: 16px;
+  line-height: 18px;
+  position: relative; }
+
+.navigation__link-mail {
+  padding-right: 122px; }
+
+.navigation__link-tel {
+  padding-right: 38px; }
+
+.navigation__button {
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+  padding: 14px;
+  background-color: inherit;
+  border-color: #ffffff;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase; }
+
+.navigation__link-tel::before,
+.navigation__link-mail::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat; }
+
+.navigation__link-tel::before {
+  content: "";
+  left: -40px;
+  top: -2px;
+  width: 24px;
+  height: 27px;
+  background-image: url("../img/phone.svg"); }
+
+.navigation__link-mail::before {
+  content: "";
+  left: -40px;
+  top: -2px;
+  width: 24px;
+  height: 27px;
+  background-image: url("../img/email.svg"); }
+
+.information__inner {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1500px;
+  position: relative; }
+
+.information__main {
+  max-width: 800px;
+  padding-right: 70px;
+  display: flex;
+  flex-direction: column;
+  position: relative; }
+
+.information__header,
+.information__text {
+  margin-top: 0;
+  color: #ffffff; }
+
+.information__header {
+  margin-bottom: 30px;
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 7px; }
+
+.information__text {
+  margin-bottom: 37px;
+  max-width: 700px;
+  padding-left: 80px;
+  font-size: 22px;
+  line-height: 35px;
+  position: relative; }
+
+.information__text::before {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  max-width: 66px;
+  border-bottom: 2px solid #ffffff; }
 
 .information__image {
   width: 705px;
   height: 515px; }
+
+.information__imagewrapper {
+  margin-bottom: 108px;
+  overflow: hidden;
+  z-index: 1; }
+
+.information__inner::before,
+.information__inner::after {
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 0; }
+
+.information__inner::before {
+  content: "";
+  right: 0;
+  top: 10px;
+  width: 636px;
+  height: 636px;
+  background-image: url("../img/informationpolygonbig.svg"); }
+
+.information__inner::after {
+  content: "";
+  right: 359px;
+  bottom: 49px;
+  width: 373px;
+  height: 373px;
+  background-image: url("../img/informationpolygonsmall.svg"); }
+
+.information__button {
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 17px 28px;
+  background-color: #00B2FF;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  max-width: 408px;
+  margin-left: 66px; }
+
+.information__scroll {
+  position: absolute;
+  transform: rotate(270deg);
+  left: -45px;
+  bottom: 200px;
+  opacity: 0.5; }
 
 .about__image {
   width: 220px;
