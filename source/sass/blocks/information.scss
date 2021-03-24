@@ -99,10 +99,57 @@
   margin-left: 66px;
 }
 
+.information__button:hover,
+.information__button:focus {
+  opacity: 0.5;
+}
+
 .information__scroll {
   position: absolute;
   transform: rotate(270deg);
   left: -45px;
   bottom: 200px;
   opacity: 0.5;
+}
+
+.information__scroll:hover,
+.information__scroll:focus {
+  color: $blue;
+}
+
+.information__dot1,
+.information__dot2,
+.information__dot3,
+.information__dot4,
+.information__dot5 {
+  width: 10px;
+  height: 10px;
+  background: $white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.information__dot1 {
+  top: 8px;
+  right: 82px;
+}
+
+.information__dot2 {
+  top: 8px;
+  right: 627px;
+}
+
+.information__dot3 {
+  bottom: 143px;
+  right: 356px;
+}
+
+.information__dot4 {
+  top: 203px;
+  right: 727px;
+}
+
+.information__dot5 {
+  bottom: 141px;
+  right: 565px;
 }

@@ -71,6 +71,13 @@
   padding-right: 38px;
 }
 
+.navigation__link-mail:hover,
+.navigation__link-tel:hover,
+.navigation__link-mail:focus,
+.navigation__link-tel:focus {
+  color: $blue;
+}
+
 .navigation__button {
   font-family: RobotoCondensed;
   font-weight: 700;
@@ -83,6 +90,11 @@
   border-radius: 10px;
   cursor: pointer;
   text-transform: uppercase;
+}
+
+.navigation__button:hover,
+.navigation__button:focus {
+  opacity: 0.5;
 }
 
 .navigation__link-tel::before,
