@@ -1,0 +1,155 @@
+.information__inner {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1500px;
+  position: relative;
+}
+
+.information__main {
+  max-width: 800px;
+  padding-right: 70px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.information__header,
+.information__text {
+  margin-top: 0;
+  color: $white;
+}
+
+.information__header {
+  margin-bottom: 30px;
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 7px;
+}
+
+.information__text {
+  margin-bottom: 37px;
+  max-width: 700px;
+  padding-left: 80px;
+  font-size: 22px;
+  line-height: 35px;
+  position: relative;
+}
+
+.information__text::before {
+  content: "";
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  max-width: 66px;
+  border-bottom: 2px solid $white;
+}
+
+.information__image {
+  width: 705px;
+  height: 515px;
+}
+
+.information__imagewrapper {
+  margin-bottom: 108px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.information__inner::before,
+.information__inner::after {
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 0;
+}
+
+.information__inner::before {
+  content: "";
+  right: 0;
+  top: 10px;
+  width: 636px;
+  height: 636px;
+  background-image: url("../img/informationpolygonbig.svg");
+}
+
+.information__inner::after {
+  content: "";
+  right: 359px;
+  bottom: 49px;
+  width: 373px;
+  height: 373px;
+  background-image: url("../img/informationpolygonsmall.svg");
+}
+
+.information__button {
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  color: $white;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 17px 28px;
+  background-color: $blue;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+  max-width: 408px;
+  margin-left: 66px;
+}
+
+.information__button:hover,
+.information__button:focus {
+  opacity: 0.5;
+}
+
+.information__scroll {
+  position: absolute;
+  transform: rotate(270deg);
+  left: -45px;
+  bottom: 200px;
+  opacity: 0.5;
+}
+
+.information__scroll:hover,
+.information__scroll:focus {
+  color: $blue;
+}
+
+.information__dot1,
+.information__dot2,
+.information__dot3,
+.information__dot4,
+.information__dot5 {
+  width: 10px;
+  height: 10px;
+  background: $white;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.information__dot1 {
+  top: 8px;
+  right: 82px;
+}
+
+.information__dot2 {
+  top: 8px;
+  right: 627px;
+}
+
+.information__dot3 {
+  bottom: 143px;
+  right: 356px;
+}
+
+.information__dot4 {
+  top: 203px;
+  right: 727px;
+}
+
+.information__dot5 {
+  bottom: 141px;
+  right: 565px;
+}
