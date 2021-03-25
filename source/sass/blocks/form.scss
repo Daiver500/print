@@ -132,6 +132,8 @@ form textarea {
 form input::placeholder,
 form textarea::placeholder {
   color: $white;
+  font-size: 16px;
+  line-height: 21px;
 }
 
 form button {
