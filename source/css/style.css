@@ -860,12 +860,112 @@ template {
   border: none; }
 
 .form {
-  background-color: #00B2FF;
-  display: flex; }
+  background-color: #00B2FF; }
+
+.form__inner {
+  max-width: 1200px;
+  display: flex;
+  padding-top: 96px;
+  padding-bottom: 114px;
+  justify-content: space-between;
+  position: relative; }
+
+.form__imagewrapper {
+  z-index: 1; }
+
+.form__inner::before,
+.form__inner::after {
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 0; }
+
+.form__inner::before {
+  content: "";
+  left: -37px;
+  bottom: 0;
+  width: 636px;
+  height: 636px;
+  background-image: url("../img/formpolygonbig.svg"); }
+
+.form__inner::after {
+  content: "";
+  left: -87px;
+  bottom: 0;
+  width: 373px;
+  height: 373px;
+  background-image: url("../img/formpolygonsmall.svg"); }
+
+.form__dot1,
+.form__dot2,
+.form__dot3 {
+  width: 10px;
+  height: 10px;
+  background: #ffffff;
+  border-radius: 50%;
+  position: absolute; }
 
 .form__image {
   width: 511px;
   height: 288px; }
+
+.form__wrapper {
+  max-width: 570px; }
+
+.form__title,
+.form__text {
+  color: #ffffff;
+  margin-top: 0; }
+
+.form__title {
+  margin-bottom: 7px;
+  font-family: RobotoCondensed;
+  font-size: 36px;
+  line-height: 51px; }
+
+.form__text {
+  margin-bottom: 49px;
+  font-size: 16px;
+  line-height: 22px; }
+
+.form__main-information {
+  margin-bottom: 40px; }
+
+.form__main-request {
+  margin-bottom: 43px; }
+
+form input,
+form textarea {
+  background-color: #19BAFF;
+  border: none;
+  color: #ffffff; }
+
+form input::-moz-placeholder, form textarea::-moz-placeholder {
+  color: #ffffff; }
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #ffffff; }
+
+form button {
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+  text-transform: uppercase;
+  background-color: inherit;
+  border: 1px solid #ffffff;
+  border-radius: 10px;
+  padding: 14px 45px; }
+
+.form__mainlowerpart {
+  display: flex;
+  justify-content: space-between; }
+
+.form__main-checkboxlabel {
+  max-width: 250px;
+  color: #ffffff;
+  display: flex; }
 
 .social__date {
   display: none; }
