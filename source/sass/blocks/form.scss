@@ -15,6 +15,7 @@
 .form__imagewrapper {
   z-index: 1;
   overflow: hidden;
+  margin-top: 161px;
 }
 
 .form__inner::before,
@@ -82,7 +83,6 @@
 .form__image {
   width: 511px;
   height: 288px;
-  margin-top: 161px;
 }
 
 .form__wrapper {
@@ -124,9 +124,13 @@ form textarea {
 }
 
 .form__main-name,
-.form__main-phone,
-.form__main-text {
+.form__main-phone {
   min-width: 270px;
+  padding: 16px;
+}
+
+.form__main-text {
+  min-width: 550px;
   padding: 16px;
 }
 
