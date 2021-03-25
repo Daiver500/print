@@ -26,7 +26,7 @@
 .form__inner::before {
   content: "";
   left: -37px;
-  bottom: 0;
+  bottom: -100px;
   width: 636px;
   height: 636px;
   background-image: url("../img/formpolygonbig.svg");
@@ -35,7 +35,7 @@
 .form__inner::after {
   content: "";
   left: -87px;
-  bottom: 0;
+  bottom: -29px;
   width: 373px;
   height: 373px;
   background-image: url("../img/formpolygonsmall.svg");
@@ -43,17 +43,45 @@
 
 .form__dot1,
 .form__dot2,
-.form__dot3 {
+.form__dot3,
+.form__dot4,
+.form__dot5 {
   width: 10px;
   height: 10px;
   background: $white;
   border-radius: 50%;
   position: absolute;
 }
-  
+
+.form__dot1 {
+  top: 197px;
+  left: -40px;
+}
+
+.form__dot2 {
+  top: 197px;
+  left: 505px;
+}
+
+.form__dot3 {
+  bottom: 56px;
+  left: 234px;
+}
+
+.form__dot4 {
+  bottom: 335px;
+  left: -90px;
+}
+
+.form__dot5 {
+  bottom: 57px;
+  left: 70px;
+}
+
 .form__image {
   width: 511px;
   height: 288px;
+  margin-top: 161px;
 }
 
 .form__wrapper {
@@ -94,6 +122,13 @@ form textarea {
   color: $white;
 }
 
+.form__main-name,
+.form__main-phone,
+.form__main-text {
+  min-width: 270px;
+  padding: 16px;
+}
+
 form input::placeholder,
 form textarea::placeholder {
   color: $white;
@@ -110,6 +145,13 @@ form button {
   border: 1px solid $white;
   border-radius: 10px;
   padding: 14px 45px;
+  cursor: pointer;
+}
+
+.form button:hover,
+.form__button:focus {
+  background-color: $white;
+  color: $blue;
 }
 
 .form__mainlowerpart {

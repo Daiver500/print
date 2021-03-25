@@ -73,6 +73,8 @@
   color: $blue;
 }
 
+.advantages__item:focus svg,
+.advantages__item:hover svg,
 .advantages__item:hover p,
 .advantages__item:focus p,
 .advantages__wrapper:hover svg,

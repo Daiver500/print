@@ -1,8 +1,155 @@
+.footer__inner {
+  max-width: 1620px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 65px;
+  padding-bottom: 65px;
+}
+
+.footer__social {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
+
+.social__list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 27px  27px 27px;
+  padding-left: 0;
+  justify-content: start;
+  margin-top: 0;
+  margin-bottom: 0;
+  grid-gap: 15px;
+}
+
+.social__link svg {
+  color: $grey;
+}
+
+.footer__logo svg {
+  color: $blue;
+}
+
+.social__link svg:hover,
+.social__link svg:focus {
+  color: $black;
+}
+
 .social__date {
   display: none;
 }
 
-.map__button,
-.contacts__button {
+.footer__logoheader,
+.footer__logotext {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.footer__logowrapper {
+  display: flex;
+  margin-bottom: 54px;
+}
+
+.footer__logoheader {
+  font-family: RobotoCondensed;
+  font-weight: 700;
+  color: $black;
+  font-size: 25px;
+  line-height: 29px;
+}
+
+.footer__logotext {
+  font-family: RobotoCondensed;
+  font-weight: 500;
+  color: $grey;
+  font-size: 12px;
+  line-height: 14px;
+}
+
+.footer__textmain {
+  padding-left: 16px;
+}
+
+.map__title,
+.contacts__title {
+  margin-top: 0;
+  margin-bottom: 29px;
+  font-family: RobotoCondensed;
+  color: $light-black;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+.map__lists {
+  display: flex;
+}
+
+.map__list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.map__list:not(:last-child) {
+  padding-right: 65px;
+}
+
+.map__item a {
+  color: $light-black;
+}
+
+.contacts__information a,
+.contacts__text {
+  color: $light-black;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.map__item a:hover,
+.map__item a:focus,
+.contacts__link:hover,
+.contacts__link:focus {
+  opacity: 0.5;
+}
+
+.contacts__information {
+  display: flex;
+  flex-direction: column;
+}
+
+.copyright__list {
+  display: flex;
+  list-style: none;
+  padding-left: 0;
+  justify-content: space-around;
+  margin-top: 14px;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.copyright__list::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  border: 1px solid $bottom-border;
+  opacity: 0.2;
+  top: -10px;
+}
+
+.copyright__text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $light-black;
+}
+
+.map__button--open,
+.contacts__button--open {
   display: none;
 }
