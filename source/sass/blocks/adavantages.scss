@@ -1,5 +1,6 @@
 .advantages {
   margin-bottom: 110px;
+  overflow: hidden;
 }
 
 .advantages__inner {
@@ -45,6 +46,7 @@
   background-image: url("../img/advantagespolygon.svg");
   transform: rotate(180deg);
 }
+
 
 .advantages__list {
   list-style: none;

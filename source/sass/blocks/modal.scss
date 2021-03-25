@@ -92,12 +92,6 @@
   color: $blue;
 }
 
-.modal__checkboxlabel {
-  color: $white;
-  font-size: 14px;
-  line-height: 16px;
-}
-
 .modalsuccess__title {
   margin: 0 auto;
   display: flex;
@@ -122,6 +116,41 @@
   background-color: inherit;
   cursor: pointer;
 }
+
+.modal__checkboxlabel {
+  max-width: 380px;
+  display: flex;
+  position: relative;
+  min-height: 16px;
+  cursor: pointer;
+  color: $white;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 30px;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.modal__checkbox {
+  position: absolute;
+  appearance: none;
+  display: none;
+}
+
+.modal__checkboxtext {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  background-image: url("../img/checkbox.svg");
+  background-repeat: no-repeat;
+}
+
+.modal__checkbox:checked + .modal__checkboxtext {
+  background-image: url("../img/checkbox-checked.svg");
+  background-repeat: no-repeat;
+}
+
 
 .hidden {
   display: none;

@@ -14,6 +14,7 @@
 
 .form__imagewrapper {
   z-index: 1;
+  overflow: hidden;
 }
 
 .form__inner::before,
@@ -161,33 +162,34 @@ form button {
   justify-content: space-between;
 }
 
-.form__main-checkbox {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-}
-
 .form__main-checkboxlabel {
   max-width: 250px;
   color: $white;
   display: flex;
   position: relative;
-  min-height: 37px;
+  min-height: 16px;
   align-items: center;
   cursor: pointer;
 }
 
+.form__main-checkbox {
+  position: absolute;
+  appearance: none;
+}
+
 .form__main-checkboxtext {
   position: absolute;
-  width: 39px;
-  height: 39px;
-  left: 0;
+  width: 16px;
+  height: 16px;
+  left: -30px;
   background-image: url("../img/checkbox.svg");
   background-repeat: no-repeat;
 }
 
-.form__main-checkbox:checked {
-  background-image: url("../img/vector.svg");
+.form__main-checkbox:checked + .form__main-checkboxtext {
+  background-image: url("../img/checkbox-checked.svg");
   background-repeat: no-repeat;
 }
+
+
+

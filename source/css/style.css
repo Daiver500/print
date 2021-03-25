@@ -610,7 +610,8 @@ template {
   right: 565px; }
 
 .advantages {
-  margin-bottom: 110px; }
+  margin-bottom: 110px;
+  overflow: hidden; }
 
 .advantages__inner {
   margin-top: 108px;
@@ -873,7 +874,8 @@ template {
   position: relative; }
 
 .form__imagewrapper {
-  z-index: 1; }
+  z-index: 1;
+  overflow: hidden; }
 
 .form__inner::before,
 .form__inner::after {
@@ -1003,31 +1005,31 @@ form button {
   display: flex;
   justify-content: space-between; }
 
-.form__main-checkbox {
-  position: absolute;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
-
 .form__main-checkboxlabel {
   max-width: 250px;
   color: #ffffff;
   display: flex;
   position: relative;
-  min-height: 37px;
+  min-height: 16px;
   align-items: center;
   cursor: pointer; }
 
+.form__main-checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none; }
+
 .form__main-checkboxtext {
   position: absolute;
-  width: 39px;
-  height: 39px;
-  left: 0;
+  width: 16px;
+  height: 16px;
+  left: -30px;
   background-image: url("../img/checkbox.svg");
   background-repeat: no-repeat; }
 
-.form__main-checkbox:checked {
-  background-image: url("../img/vector.svg");
+.form__main-checkbox:checked + .form__main-checkboxtext {
+  background-image: url("../img/checkbox-checked.svg");
   background-repeat: no-repeat; }
 
 .footer__inner {
@@ -1251,11 +1253,6 @@ form button {
   background-color: #ffffff;
   color: #00B2FF; }
 
-.modal__checkboxlabel {
-  color: #ffffff;
-  font-size: 14px;
-  line-height: 16px; }
-
 .modalsuccess__title {
   margin: 0 auto;
   display: flex;
@@ -1277,6 +1274,38 @@ form button {
   border: none;
   background-color: inherit;
   cursor: pointer; }
+
+.modal__checkboxlabel {
+  max-width: 380px;
+  display: flex;
+  position: relative;
+  min-height: 16px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 16px;
+  padding-left: 30px;
+  align-items: flex-start;
+  text-align: left; }
+
+.modal__checkbox {
+  position: absolute;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  display: none; }
+
+.modal__checkboxtext {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: 0;
+  background-image: url("../img/checkbox.svg");
+  background-repeat: no-repeat; }
+
+.modal__checkbox:checked + .modal__checkboxtext {
+  background-image: url("../img/checkbox-checked.svg");
+  background-repeat: no-repeat; }
 
 .hidden {
   display: none; }
