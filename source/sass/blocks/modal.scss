@@ -98,6 +98,18 @@
   line-height: 16px;
 }
 
+.modalsuccess__title {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  max-width: 380px;
+}
+
+.modalsuccess__text {
+  color: $white;
+  font-size: 24px;
+  line-height: 31px;
+}
 
 .modal__close,
 .modalsuccess__close {
