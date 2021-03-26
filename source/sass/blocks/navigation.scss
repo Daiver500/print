@@ -120,3 +120,43 @@
   height: 27px;
   background-image: url("../img/email.svg");
 }
+
+.navigation__contactstablet {
+  display: none;
+}
+
+@media (max-width: $max-tablet-width) {
+  .navigation {
+    padding-top: 20px;
+    padding-bottom: 0;
+  }
+
+  .navigation__contacts {
+    display: none;
+  }
+
+  .navigation__contactstablet {
+    display: block;
+    padding-right: 20px;
+  }
+
+  .navigation__contactstablet--mail svg,
+  .navigation__contactstablet--phone svg {
+    color: $blue;
+  }
+
+  .navigation__contactstablet--mail:hover,
+  .navigation__contactstablet--mail:focus,
+  .navigation__contactstablet--phone:hover,
+  .navigation__contactstablet--phone:focus {
+    opacity: 0.5;
+  }
+
+  .navigation__contactstablet--mail {
+    padding-right: 20px;
+  }
+
+  .navigation__logowrapper {
+    padding-left: 20px;
+  }
+}

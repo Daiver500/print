@@ -1,5 +1,5 @@
 .about {
-  margin-bottom: 110px;
+  padding-bottom: 110px;
 }
 
 .about__inner {
@@ -15,8 +15,8 @@
   left: -522px;
   top: -320px;
   width: 727px;
-  height: 636px;
-  background-image: url(../img/advantagespolygonbig.svg);
+  height: 727px;
+  background-image: url("../img/advantagespolygonbig.svg");
   transform: rotate(180deg);
 }
 
@@ -64,27 +64,32 @@
   height: 317px;
 }
 
-.about__dot1,
-.about__dot2,
-.about__dot3 {
-  width: 10px;
-  height: 10px;
-  background: $super-light-grey;
-  border-radius: 50%;
-  position: absolute;
-}
+@media (max-width: $max-tablet-width) {
+  .about {
+    padding-bottom: 83px;
+  }
 
-.about__dot1 {
-  top: -237px;
-  left: -40px;
-}
+  .about__image {
+    width: 227px;
+    height: 362px;
+  }
 
-.about__dot2 {
-  top: 307px;
-  left: -39px;
-}
+  .about__title {
+    margin-bottom: 23px;
+    font-size: 32px;
+    line-height: 42px;
+  }
 
-.about__dot3 {
-  top: 35px;
-  left: -510px;
+  .about__text {
+    margin-bottom: 34px;
+    font-size: 15px;
+  }
+
+  .about__text--desktop {
+    display: none;
+  }
+
+  .about__button {
+    padding: 14px 55px;
+  }
 }

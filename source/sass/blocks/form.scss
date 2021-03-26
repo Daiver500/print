@@ -3,6 +3,10 @@
   background-color: $blue;
 }
 
+.form__main {
+  z-index: 1;
+}
+
 .form__inner {
   max-width: 1200px;
   display: flex;
@@ -85,7 +89,7 @@
   height: 288px;
 }
 
-.form__wrapper {
+.form__main-data {
   max-width: 570px;
 }
 
@@ -174,6 +178,8 @@ form button {
   min-height: 16px;
   align-items: center;
   cursor: pointer;
+  font-size: 14px;
+  line-height: 16px;
 }
 
 .form__main-checkbox {
@@ -188,12 +194,57 @@ form button {
   left: -30px;
   background-image: url("../img/checkbox.svg");
   background-repeat: no-repeat;
+
 }
 
 .form__main-checkbox:checked + .form__main-checkboxtext {
   background-image: url("../img/checkbox-checked.svg");
   background-repeat: no-repeat;
 }
+
+@media (max-width: $max-tablet-width) {
+  .form__inner {
+    padding-top: 83px;
+    padding-bottom: 103px;
+    justify-content: center;
+  }
+  
+  .form__imagewrapper,
+  .form__inner::after,
+  .form__inner::before {
+    display: none;
+  }
+
+  .form__title {
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  .form__text {
+    margin-bottom: 51px;
+  }
+
+  .form__main-name,
+  .form__main-phone {
+    min-width: 290px;
+    padding: 16px;
+  }
+
+  .form__main-text {
+    min-width: 590px;
+    padding: 16px;
+  }
+
+  .form__main-data {
+    max-width: 590px;
+  }
+
+  form button {
+    padding: 14px 65px;
+  }
+  
+}
+
 
 
 
