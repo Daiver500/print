@@ -236,6 +236,23 @@
   .copyright__item--hidden {
     display: none;
   }
+}
 
-  
+@media (max-width: $max-mobile-width) {
+  .map__button--open,
+  .contacts__button--open {
+    display: block;
+    border: none;
+    background-color: inherit;
+  }
+
+  .map--hidden,
+  .contacts--hidden {
+    display: none;
+  }
+
+  .contacts__titleandbutton,
+  .map__titleandbuttons {
+    display: flex;
+  }
 }
