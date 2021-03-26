@@ -1,10 +1,12 @@
 
 .form {
   background-color: $blue;
+  overflow: hidden;
 }
 
 .form__main {
   z-index: 1;
+  position: relative;
 }
 
 .form__inner {
@@ -60,12 +62,12 @@
 }
 
 .form__dot1 {
-  top: 197px;
+  top: 1927px;
   left: -40px;
 }
 
 .form__dot2 {
-  top: 197px;
+  top: 192px;
   left: 505px;
 }
 
@@ -201,6 +203,35 @@ form button {
   background-image: url("../img/checkbox-checked.svg");
   background-repeat: no-repeat;
 }
+
+.form__main::before,
+.form__main::after {
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 298px;
+  height: 298px;
+}
+
+.form__main::before {
+  content: "";
+  left: 600px;
+  top: -73px;
+  background-image: url("../img/formpolygon1.svg");
+  width: 262px;
+  height: 262px;
+}
+
+.form__main::after {
+  content: "";
+  right: -515px;
+  bottom: 0;
+  background-image: url("../img/formpolygonsmall.svg");
+  transform: rotate(270deg);
+  width: 373px;
+  height: 373px;
+}
+
 
 @media (max-width: $max-tablet-width) {
   .form__inner {

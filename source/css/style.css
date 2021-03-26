@@ -971,10 +971,12 @@ template {
     right: 0; } }
 
 .form {
-  background-color: #00B2FF; }
+  background-color: #00B2FF;
+  overflow: hidden; }
 
 .form__main {
-  z-index: 1; }
+  z-index: 1;
+  position: relative; }
 
 .form__inner {
   max-width: 1200px;
@@ -1023,11 +1025,11 @@ template {
   position: absolute; }
 
 .form__dot1 {
-  top: 197px;
+  top: 1927px;
   left: -40px; }
 
 .form__dot2 {
-  top: 197px;
+  top: 192px;
   left: 505px; }
 
 .form__dot3 {
@@ -1148,6 +1150,31 @@ form button {
   background-image: url("../img/checkbox-checked.svg");
   background-repeat: no-repeat; }
 
+.form__main::before,
+.form__main::after {
+  position: absolute;
+  background-repeat: no-repeat;
+  z-index: 0;
+  width: 298px;
+  height: 298px; }
+
+.form__main::before {
+  content: "";
+  left: 600px;
+  top: -73px;
+  background-image: url("../img/formpolygon1.svg");
+  width: 262px;
+  height: 262px; }
+
+.form__main::after {
+  content: "";
+  right: -515px;
+  bottom: 0;
+  background-image: url("../img/formpolygonsmall.svg");
+  transform: rotate(270deg);
+  width: 373px;
+  height: 373px; }
+
 @media (max-width: 1023px) {
   .form__inner {
     padding-top: 83px;
@@ -1190,7 +1217,8 @@ form button {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   padding-top: 65px;
-  padding-bottom: 65px; }
+  padding-bottom: 65px;
+  justify-items: center; }
 
 .footer__social {
   display: flex;
@@ -1301,7 +1329,8 @@ form button {
   margin-top: 14px;
   margin-bottom: 14px;
   position: relative;
-  padding-left: 0; }
+  padding-left: 10%;
+  padding-right: 10%; }
 
 .copyright__text {
   margin-top: 0;
@@ -1330,7 +1359,8 @@ form button {
     padding-top: 20px;
     padding-bottom: 24px;
     padding-left: 25px;
-    padding-right: 25px; }
+    padding-right: 25px;
+    justify-items: unset; }
   .footer__social {
     flex-direction: row;
     grid-column-start: 1;
@@ -1339,8 +1369,8 @@ form button {
     padding-top: 0;
     position: relative; }
   .copyright__list {
-    padding-left: 25px;
-    padding-right: 25px; }
+    padding-left: 15px;
+    padding-right: 15px; }
   .footer__logowrapper {
     margin-bottom: 0; }
   .social__list {
