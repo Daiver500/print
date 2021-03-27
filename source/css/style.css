@@ -605,7 +605,9 @@ template {
   transform: rotate(270deg);
   left: -55px;
   bottom: 100px;
-  opacity: 0.5; }
+  opacity: 0.5;
+  color: #788891;
+  cursor: pointer; }
 
 .information__scroll:hover,
 .information__scroll:focus {
@@ -1508,6 +1510,9 @@ form button {
 .contacts__button--open {
   display: none; }
 
+.footer__border {
+  display: none; }
+
 @media (max-width: 1023px) {
   .footer::before {
     content: "";
@@ -1558,7 +1563,8 @@ form button {
   .footer__inner {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px; }
+    margin-bottom: 25px;
+    overflow: hidden; }
   .footer__social {
     flex-direction: column;
     margin-bottom: 83px;
@@ -1597,14 +1603,15 @@ form button {
     display: none; }
   .footer__copyright {
     position: relative; }
-  .footer__copyright::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
+  .footer__border {
+    display: block;
     border: 1px solid #626962;
     opacity: 0.2;
-    top: -170px; } }
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 767px;
+    top: -38px; } }
 
 .modal__inner,
 .modalsuccess__inner {

@@ -172,6 +172,10 @@
   display: none;
 }
 
+.footer__border {
+  display: none;
+}
+
 @media (max-width: $max-tablet-width) {
   .footer::before {
     content: "";
@@ -242,7 +246,8 @@
   .footer__inner {
     display: flex;
     flex-direction: column;
-    margin-bottom: 50px;
+    margin-bottom: 25px;
+    overflow: hidden;
   }
 
   .footer__social {
@@ -305,13 +310,14 @@
     position: relative;
   }
 
-  .footer__copyright::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
+  .footer__border {
+    display: block;
     border: 1px solid $bottom-border;
     opacity: 0.2;
-    top: -170px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 767px;
+    top: -38px;
   }
 }
