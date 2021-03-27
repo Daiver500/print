@@ -63,26 +63,40 @@ const scrollButtonsClickHandler = (evt) => {
   footerContactsButtonOpen.addEventListener("click", showFooterContactsLists );
   footerContactsButtonClose.addEventListener("click", hideFooterContactsLists);
 
-  //TEST
+  //Маска для телефона
 
-  let telInp = document.getElementById('tel-inp');
+  let telInp = document.querySelector(".form__main-phone");
   //контроль количества введенных цифр
   let howDigits = str => str.split('').filter(el => /\d/.test(el)).length;
   //при фокусе подставляем +7(
-  let whenFocusPhone = e => e.target.value = '+7(';
+  let whenFocusPhone = (evt) => evt.target.value = '+7(';
+  
+
   //чтоб вводились только цифры
-  let checkPhoneKey = key => key >= '0' && key <= '9';
-  let checkNumPhone = (e) => {
-    if(!checkPhoneKey(e.target.value[e.target.value.length - 1]) || howDigits(e.target.value) > 11)
-        e.target.value = e.target.value.slice(0, -1);
-    if(e.target.value.length === 6)
-        e.target.value += ')-';
-    if(e.target.value.length === 11 || e.target.value.length === 14)
-        e.target.value += '-';
-  };
+  let checkPhoneKey = (key) => key >= '0' && key <= '9';
+  let checkNumPhone = (evt) => {
+    if(!checkPhoneKey(evt.target.value[evt.target.value.length - 1]) || howDigits(evt.target.value) > 11) {
+        evt.target.value = evt.target.value.slice(0, -1);
+    }
+    if(evt.target.value.length === 6) {
+        evt.target.value += ')';
+    }
+};
+
+const keyHandler = (evt) => {
+    let telInp = document.querySelector(".form__main-phone");
+    if (evt.key === `Backspace`) {
+        telInp.value = '';
+        evt.preventDefault();
+    }
+}
+
+  
+  telInp.addEventListener('keydown', keyHandler);
+  telInp.addEventListener('keydown', checkPhoneKey);
   telInp.addEventListener('focus', whenFocusPhone);
   telInp.addEventListener('input', checkNumPhone);
-  telInp.addEventListener('keydown', checkPhoneKey);
+ 
 
 /*document.getElementById('tel-inp').addEventListener('input', (e) => {
     let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
