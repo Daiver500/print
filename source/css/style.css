@@ -683,7 +683,8 @@ template {
     right: 164px; }
   .information__dot4 {
     top: 162px;
-    right: 290px; }
+    right: 290px;
+    z-index: -1; }
   .information__dot5 {
     bottom: 200px;
     right: 49px; }
@@ -791,6 +792,7 @@ template {
     margin-left: 0 auto; } }
 
 .advantagesandabout {
+  margin-bottom: 108px;
   margin-top: 108px;
   background-image: url("../img/advantagespolygonbig.svg");
   background-repeat: no-repeat;
@@ -1217,7 +1219,7 @@ form textarea {
   padding: 16px; }
 
 .form__main-text {
-  min-width: 550px;
+  width: 550px;
   padding: 16px; }
 
 form input::-moz-placeholder, form textarea::-moz-placeholder {
@@ -1326,14 +1328,14 @@ form button {
     min-width: 290px;
     padding: 16px; }
   .form__main-text {
-    min-width: 590px;
+    width: 590px;
     padding: 16px; }
   .form__main-data {
     max-width: 590px; }
   form button {
     padding: 14px 65px; } }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   .form__inner {
     padding-top: 33px;
     padding-bottom: 41px; }
@@ -1355,7 +1357,7 @@ form button {
   .form__main-button {
     margin-bottom: 30px; }
   .form__main-text {
-    min-width: 290px; }
+    width: 290px; }
   .form__mainlowerpart {
     flex-direction: column; }
   .form__main-checkboxtext {
@@ -1580,7 +1582,29 @@ form button {
     padding-right: 0; }
   .map__button--open,
   .contacts__button--open {
-    display: block; } }
+    display: block; }
+  .map__titleandbuttons,
+  .contacts__titleandbuttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; }
+  .map__button,
+  .contacts__button {
+    border: none;
+    background-color: inherit; }
+  .map__lists--hidden,
+  .contacts__information--hidden {
+    display: none; }
+  .footer__copyright {
+    position: relative; }
+  .footer__copyright::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 1px solid #626962;
+    opacity: 0.2;
+    top: -170px; } }
 
 .modal__inner,
 .modalsuccess__inner {

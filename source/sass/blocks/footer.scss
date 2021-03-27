@@ -282,5 +282,36 @@
   .contacts__button--open {
     display: block;
   }
+
+  .map__titleandbuttons,
+  .contacts__titleandbuttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .map__button,
+  .contacts__button {
+    border: none;
+    background-color: inherit;
+  }
+
+  .map__lists--hidden,
+  .contacts__information--hidden {
+    display: none;
+  }
+
+  .footer__copyright {
+    position: relative;
+  }
+
+  .footer__copyright::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    border: 1px solid $bottom-border;
+    opacity: 0.2;
+    top: -170px;
+  }
 }
-  

@@ -136,7 +136,7 @@ form textarea {
 }
 
 .form__main-text {
-  min-width: 550px;
+  width: 550px;
   padding: 16px;
 }
 
@@ -262,7 +262,7 @@ form button {
   }
 
   .form__main-text {
-    min-width: 590px;
+    width: 590px;
     padding: 16px;
   }
 
@@ -275,7 +275,7 @@ form button {
   }
 }
 
-@media (max-width: $max-tablet-width) {
+@media (max-width: $max-mobile-width) {
   .form__inner {
     padding-top: 33px;
     padding-bottom: 41px;
@@ -307,7 +307,7 @@ form button {
   }
 
   .form__main-text {
-    min-width: 290px;
+    width: 290px;
   }
  
   .form__mainlowerpart {
