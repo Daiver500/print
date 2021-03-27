@@ -62,6 +62,32 @@ const scrollButtonsClickHandler = (evt) => {
   footerMapButtonClose.addEventListener("click",hideFooterMapLists);
   footerContactsButtonOpen.addEventListener("click", showFooterContactsLists );
   footerContactsButtonClose.addEventListener("click", hideFooterContactsLists);
+
+  //TEST
+
+  let telInp = document.getElementById('tel-inp');
+  //контроль количества введенных цифр
+  let howDigits = str => str.split('').filter(el => /\d/.test(el)).length;
+  //при фокусе подставляем +7(
+  let whenFocusPhone = e => e.target.value = '+7(';
+  //чтоб вводились только цифры
+  let checkPhoneKey = key => key >= '0' && key <= '9';
+  let checkNumPhone = (e) => {
+    if(!checkPhoneKey(e.target.value[e.target.value.length - 1]) || howDigits(e.target.value) > 11)
+        e.target.value = e.target.value.slice(0, -1);
+    if(e.target.value.length === 6)
+        e.target.value += ')-';
+    if(e.target.value.length === 11 || e.target.value.length === 14)
+        e.target.value += '-';
+  };
+  telInp.addEventListener('focus', whenFocusPhone);
+  telInp.addEventListener('input', checkNumPhone);
+  telInp.addEventListener('keydown', checkPhoneKey);
+
+/*document.getElementById('tel-inp').addEventListener('input', (e) => {
+    let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
+    e.target.value = !x[2] ? x[1] : '(' + x[1] + ')' + x[2] + (x[3] ? '-' + x[3] : '') + (x[4] ? '-' + x[4] : '');
+  });*/
   
 
 })();
