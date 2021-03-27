@@ -273,9 +273,52 @@ form button {
   form button {
     padding: 14px 65px;
   }
-  
 }
 
+@media (max-width: $max-tablet-width) {
+  .form__inner {
+    padding-top: 33px;
+    padding-bottom: 41px;
+  }
 
+  .form__main-data {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
 
+  .form__title {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 30px;
+  }
 
+  .form__text {
+    margin-bottom: 40px;
+  }
+
+  .form__main-name,
+  .form__main-information,
+  .form__main-request,
+  .form__main-button {
+    margin-bottom: 30px;
+  }
+
+  .form__main-text {
+    min-width: 290px;
+  }
+ 
+  .form__mainlowerpart {
+    flex-direction: column;
+  }
+
+  .form__main-checkboxtext {
+    left: 5px;
+  }
+  
+  .form__main-checkboxlabel {
+    padding-left: 30px;
+  }
+}

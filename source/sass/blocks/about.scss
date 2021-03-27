@@ -1,5 +1,5 @@
-.about {
-  padding-bottom: 110px;
+.advanatesgandabout {
+  margin-bottom: 110px;
 }
 
 .about__inner {
@@ -65,8 +65,8 @@
 }
 
 @media (max-width: $max-tablet-width) {
-  .about {
-    padding-bottom: 83px;
+  .advantagesandabout {
+    margin-bottom: 83px;
   }
 
   .about__image {
@@ -91,5 +91,30 @@
 
   .about__button {
     padding: 14px 55px;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .advantagesandabout {
+    margin-bottom: 60px;
+    background-position: 20% 80%;
+  }
+
+  .about__inner {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .about__imagewrapper {
+    display: none;
+  }
+
+  .advantages__list {
+    justify-items: unset;
+  }
+
+  .about__title {
+    font-size: 28px;
+    line-height: 39px;
   }
 }

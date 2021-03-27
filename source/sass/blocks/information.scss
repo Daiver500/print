@@ -28,6 +28,7 @@
   font-size: 80px;
   line-height: 94px;
   letter-spacing: 7px;
+  text-transform: uppercase;
 }
 
 .information__text {
@@ -55,7 +56,6 @@
 }
 
 .information__imagewrapper {
-  
   overflow: hidden;
   z-index: 1;
 }
@@ -156,6 +156,10 @@
   right: 565px;
 }
 
+.information__buttonmobile {
+  display: none;
+}
+
 @media (max-width: $max-tablet-width) {
   .information__inner {
     overflow: hidden;
@@ -249,5 +253,122 @@
   .information__button {
     padding: 17px 15px;
     margin-left: 36px;
+  }
+}
+
+@media (max-width: $max-mobile-width) {
+  .information__inner {
+    flex-direction: column-reverse;
+    padding-top: 215px;
+    padding-right: 10px;
+    padding-bottom: 70px;
+  }
+
+  .information__main {
+    padding-top: 0;
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 320px;
+  }
+
+  .information__image {
+    width: 301px;
+    height: 220px;
+  }
+
+  .information__imagewrapper {
+    position: absolute;
+    top: 20px;
+    transform: translateX(-50%);
+    left: 55%;
+  }
+
+  .information__inner::before,
+  .information__inner::after {
+   // opacity: 0.2;
+  }
+
+  .information__inner::before {
+    right: -358px;
+    top: 5px;
+    width: 470px;
+    height: 470px;
+    background-image: url("../img/informationpolygonbig-mobile.svg");
+  }
+
+  .information__inner::after {
+    content: "";
+    right: -133px;
+    top: 142px;
+    width: 280px;
+    height: 280px;
+    background-image: url("../img/informationpolygonsmall-mobile.svg");
+  }
+  
+  
+  .information__dot5,
+  .information__dot1,
+  .information__dot3,
+  .information__dot4 {
+    display: none;
+  }
+
+  .informationmain__dot1,
+  .informationmain__dot2,
+  .informationmain__dot3 {
+    width: 8px;
+    height: 8px;
+    background: $white;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  .informationmain__dot1 {
+    bottom: 221px;
+    right: 20px;
+  }
+  
+  .informationmain__dot2 {
+    top: 2px;
+    right: 107px;
+  }
+
+  .informationmain__dot3 {
+    top: 139px;
+    right: 142px;
+  }
+
+  .information__header {
+    font-size: 40px;
+    line-height: 47px;
+    z-index: 2;
+    letter-spacing: 4px;
+  }
+
+  .information__text {
+    margin-bottom: 42px;
+    font-size: 16px;
+    line-height: 25px;
+  }
+
+  .information__button {
+    display: none;
+  }
+
+  .information__buttonmobile {
+    display: block;
+    font-family: RobotoCondensed;
+    font-weight: 700;
+    color: $white;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 17px 28px;
+    background-color: $blue;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    max-width: 408px;
+    margin-left: 0 auto;
   }
 }

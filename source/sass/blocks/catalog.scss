@@ -103,5 +103,26 @@
     bottom: 0;
     right: 0;
   }
-  
+}
+
+@media (max-width: $max-tablet-width) {
+  .catalog__inner {
+    padding-bottom: 64px;
+  }
+
+  .catalog__title {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 37px;
+  }
+
+  .catalog__wrapper {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .catalog__text {
+    top: 22px;
+    left: 21px;
+  }
 }

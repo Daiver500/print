@@ -485,7 +485,7 @@ template {
     display: none; }
   .navigation__contactstablet {
     display: block;
-    padding-right: 20px; }
+    padding-right: 40px; }
   .navigation__contactstablet--mail svg,
   .navigation__contactstablet--phone svg {
     color: #00B2FF; }
@@ -498,6 +498,12 @@ template {
     padding-right: 20px; }
   .navigation__logowrapper {
     padding-left: 20px; } }
+
+@media (max-width: 767px) {
+  .navigation__textmain {
+    display: none; }
+  .navigation__contactstablet {
+    padding-right: 20px; } }
 
 .information__inner {
   display: flex;
@@ -525,7 +531,8 @@ template {
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
-  letter-spacing: 7px; }
+  letter-spacing: 7px;
+  text-transform: uppercase; }
 
 .information__text {
   margin-bottom: 37px;
@@ -635,6 +642,9 @@ template {
   bottom: 141px;
   right: 565px; }
 
+.information__buttonmobile {
+  display: none; }
+
 @media (max-width: 1023px) {
   .information__inner {
     overflow: hidden;
@@ -699,12 +709,98 @@ template {
     padding: 17px 15px;
     margin-left: 36px; } }
 
+@media (max-width: 767px) {
+  .information__inner {
+    flex-direction: column-reverse;
+    padding-top: 215px;
+    padding-right: 10px;
+    padding-bottom: 70px; }
+  .information__main {
+    padding-top: 0;
+    padding-left: 0;
+    margin: 0 auto;
+    max-width: 320px; }
+  .information__image {
+    width: 301px;
+    height: 220px; }
+  .information__imagewrapper {
+    position: absolute;
+    top: 20px;
+    transform: translateX(-50%);
+    left: 55%; }
+  .information__inner::before {
+    right: -358px;
+    top: 5px;
+    width: 470px;
+    height: 470px;
+    background-image: url("../img/informationpolygonbig-mobile.svg"); }
+  .information__inner::after {
+    content: "";
+    right: -133px;
+    top: 142px;
+    width: 280px;
+    height: 280px;
+    background-image: url("../img/informationpolygonsmall-mobile.svg"); }
+  .information__dot5,
+  .information__dot1,
+  .information__dot3,
+  .information__dot4 {
+    display: none; }
+  .informationmain__dot1,
+  .informationmain__dot2,
+  .informationmain__dot3 {
+    width: 8px;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute; }
+  .informationmain__dot1 {
+    bottom: 221px;
+    right: 20px; }
+  .informationmain__dot2 {
+    top: 2px;
+    right: 107px; }
+  .informationmain__dot3 {
+    top: 139px;
+    right: 142px; }
+  .information__header {
+    font-size: 40px;
+    line-height: 47px;
+    z-index: 2;
+    letter-spacing: 4px; }
+  .information__text {
+    margin-bottom: 42px;
+    font-size: 16px;
+    line-height: 25px; }
+  .information__button {
+    display: none; }
+  .information__buttonmobile {
+    display: block;
+    font-family: RobotoCondensed;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 19px;
+    padding: 17px 28px;
+    background-color: #00B2FF;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    max-width: 408px;
+    margin-left: 0 auto; } }
+
+.advantagesandabout {
+  margin-top: 108px;
+  background-image: url("../img/advantagespolygonbig.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 30%; }
+
 .advantages {
-  padding-bottom: 110px;
+  margin-bottom: 110px;
   overflow: hidden; }
 
 .advantages__inner {
-  margin-top: 108px;
   max-width: 1170px;
   position: relative; }
 
@@ -790,27 +886,34 @@ template {
   line-height: 22px;
   color: #666666; }
 
-.advantagesandabout {
-  background-image: url("../img/advantagespolygonbig.svg");
-  background-repeat: no-repeat;
-  background-position: 50% 30%; }
-
 @media (max-width: 1023px) {
-  .advantages__inner {
+  .advantagesandabout {
     margin-top: 54px;
+    background-position: -171% 64%; }
+  .advantages__inner {
     padding-left: 15px;
     padding-right: 15px; }
   .advantages__inner::before {
     display: none; }
   .advantages {
-    padding-bottom: 60px; }
-  .advantagesandabout {
-    background-position: -171% 64%; }
+    margin-bottom: 60px; }
   .advantages__item {
     padding: 40px 25px 49px 44px; } }
 
-.about {
-  padding-bottom: 110px; }
+@media (max-width: 767px) {
+  .advantagesandabout {
+    margin-top: 37px; }
+  .advantages__list {
+    grid-template-columns: 1fr;
+    grid-gap: 20px; }
+  .advantages__title {
+    font-size: 20px;
+    line-height: 28px; }
+  .advantages__item {
+    padding: 40px 17px 38px 20px; } }
+
+.advanatesgandabout {
+  margin-bottom: 110px; }
 
 .about__inner {
   display: flex;
@@ -867,8 +970,8 @@ template {
   height: 317px; }
 
 @media (max-width: 1023px) {
-  .about {
-    padding-bottom: 83px; }
+  .advantagesandabout {
+    margin-bottom: 83px; }
   .about__image {
     width: 227px;
     height: 362px; }
@@ -883,6 +986,21 @@ template {
     display: none; }
   .about__button {
     padding: 14px 55px; } }
+
+@media (max-width: 767px) {
+  .advantagesandabout {
+    margin-bottom: 60px;
+    background-position: 20% 80%; }
+  .about__inner {
+    padding-left: 15px;
+    padding-right: 15px; }
+  .about__imagewrapper {
+    display: none; }
+  .advantages__list {
+    justify-items: unset; }
+  .about__title {
+    font-size: 28px;
+    line-height: 39px; } }
 
 .catalog {
   background-color: #1B2D37; }
@@ -969,6 +1087,20 @@ template {
   .catalog__button {
     bottom: 0;
     right: 0; } }
+
+@media (max-width: 1023px) {
+  .catalog__inner {
+    padding-bottom: 64px; }
+  .catalog__title {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 37px; }
+  .catalog__wrapper {
+    padding-left: 10px;
+    padding-right: 10px; }
+  .catalog__text {
+    top: 22px;
+    left: 21px; } }
 
 .form {
   background-color: #00B2FF;
@@ -1201,6 +1333,36 @@ form button {
   form button {
     padding: 14px 65px; } }
 
+@media (max-width: 1023px) {
+  .form__inner {
+    padding-top: 33px;
+    padding-bottom: 41px; }
+  .form__main-data {
+    max-width: 320px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15px;
+    padding-right: 15px; }
+  .form__title {
+    font-size: 28px;
+    line-height: 39px;
+    margin-bottom: 30px; }
+  .form__text {
+    margin-bottom: 40px; }
+  .form__main-name,
+  .form__main-information,
+  .form__main-request,
+  .form__main-button {
+    margin-bottom: 30px; }
+  .form__main-text {
+    min-width: 290px; }
+  .form__mainlowerpart {
+    flex-direction: column; }
+  .form__main-checkboxtext {
+    left: 5px; }
+  .form__main-checkboxlabel {
+    padding-left: 30px; } }
+
 .footer {
   position: relative; }
 
@@ -1389,6 +1551,36 @@ form button {
     flex-direction: column; }
   .copyright__item--hidden {
     display: none; } }
+
+@media (max-width: 767px) {
+  .footer__inner {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px; }
+  .footer__social {
+    flex-direction: column;
+    margin-bottom: 83px;
+    align-items: center; }
+  .footer::before {
+    top: 185px; }
+  .footer::after {
+    bottom: 80px; }
+  .footer__map {
+    margin-bottom: 50px; }
+  .map__title,
+  .contacts__title {
+    margin-bottom: 36px; }
+  .copyright__list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 26px;
+    padding-left: 0;
+    padding-right: 0; }
+  .map__button--open,
+  .contacts__button--open {
+    display: block; } }
 
 .modal__inner,
 .modalsuccess__inner {
