@@ -1,25 +1,31 @@
 (function () {
 
-const informationScrollButtons = document.querySelectorAll(".scroll");
-const advantages = document.querySelector(".advantages");
-const form = document.querySelector(".form__inner");
+  const informationScrollButtons = document.querySelectorAll(".scroll");
+  const advantages = document.querySelector(".advantages");
+  const form = document.querySelector(".form__inner");
 
-//Плавная прокрутка
+  //Плавная прокрутка
 
-const scrollButtonsClickHandler = (evt) => {
+  const scrollButtonsClickHandler = (evt) => {
     switch (evt.target.id) {
       case "information-button":
-        form.scrollIntoView({behavior: "smooth"});
+        form.scrollIntoView({
+          behavior: "smooth"
+        });
         break;
       case "information-buttonmobile":
-        form.scrollIntoView({behavior: "smooth"});
+        form.scrollIntoView({
+          behavior: "smooth"
+        });
         break;
       case "information-scroll":
-        advantages.scrollIntoView({behavior: "smooth"});
+        advantages.scrollIntoView({
+          behavior: "smooth"
+        });
         break;
     }
   };
-  
+
   informationScrollButtons.forEach((button) => {
     button.addEventListener("click", scrollButtonsClickHandler);
   });
@@ -59,69 +65,71 @@ const scrollButtonsClickHandler = (evt) => {
 
 
   footerMapButtonOpen.addEventListener("click", showFooterMapLists);
-  footerMapButtonClose.addEventListener("click",hideFooterMapLists);
-  footerContactsButtonOpen.addEventListener("click", showFooterContactsLists );
+  footerMapButtonClose.addEventListener("click", hideFooterMapLists);
+  footerContactsButtonOpen.addEventListener("click", showFooterContactsLists);
   footerContactsButtonClose.addEventListener("click", hideFooterContactsLists);
-  
+
 
   // Маска
 
-let phoneInput = document.querySelector(".form__main-phone");
-let modalPhoneInput = document.querySelector(".modal__phone");
+  let phoneInput = document.querySelector(".form__main-phone");
+  let modalPhoneInput = document.querySelector(".modal__phone");
   //контроль количества введенных цифр
-let howDigits = str => str.split('').filter(el => /\d/.test(el)).length;
-//при фокусе подставляем +7(
-let whenFocusPhone = (evt) => evt.target.value = '+7(';
-//чтоб вводились только цифры
-let checkPhoneKey = (key) => key >= '0' && key <= '9';
-let checkNumPhone = (evt) => {
-    if(!checkPhoneKey(evt.target.value[evt.target.value.length - 1]) || howDigits(evt.target.value) > 11) {
-        evt.target.value = evt.target.value.slice(0, -1);
-    };
-    if(evt.target.value.length === 6) {
-        evt.target.value += ')';
+  let howDigits = str => str.split('').filter(el => /\d/.test(el)).length;
+  //при фокусе подставляем +7(
+  let whenFocusPhone = (evt) => evt.target.value = '+7(';
+  //чтоб вводились только цифры
+  let checkPhoneKey = (key) => key >= '0' && key <= '9';
+  let checkNumPhone = (evt) => {
+    if (!checkPhoneKey(evt.target.value[evt.target.value.length - 1]) || howDigits(evt.target.value) > 11) {
+      evt.target.value = evt.target.value.slice(0, -1);
     }
-        if(evt.target.value.length === 2) {
-        evt.target.value += '(';
-      }
-    };
+    if (evt.target.value.length === 6) {
+      evt.target.value += ')';
+    }
+    if (evt.target.value.length === 2) {
+      evt.target.value += '(';
+    }
+  };
 
-    const checkPhoneInput = () => {
-      if(phoneInput.value.length < 14) {
-        phoneInput.setCustomValidity("Номер должен быть из 10 цифр");
-        } else {phoneInput.setCustomValidity(``);}
-        phoneInput.reportValidity();
-    };
+  const checkPhoneInput = () => {
+    if (phoneInput.value.length < 14) {
+      phoneInput.setCustomValidity("Номер должен быть из 10 цифр");
+    } else {
+      phoneInput.setCustomValidity(``);
+    }
+    phoneInput.reportValidity();
+  };
 
-    const checkModalPhoneInput = () => {
-      if(modalPhoneInput.value.length < 14) {
-        modalPhoneInput.setCustomValidity("Номер должен быть из 10 цифр");
-        } else {modalPhoneInput.setCustomValidity(``);}
-        modalPhoneInput.reportValidity();
-    };
+  const checkModalPhoneInput = () => {
+    if (modalPhoneInput.value.length < 14) {
+      modalPhoneInput.setCustomValidity("Номер должен быть из 10 цифр");
+    } else {
+      modalPhoneInput.setCustomValidity(``);
+    }
+    modalPhoneInput.reportValidity();
+  };
 
-const backspaceClickHandler = (evt) => {
-  if (evt.key === `Backspace`) {
-    phoneInput.value = '';
-    modalPhoneInput.value = '';
-    phoneInput.value += '+7(';
-    modalPhoneInput.value += '+7(';
-  }
-};
+  const backspaceClickHandler = (evt) => {
+    if (evt.key === `Backspace`) {
+      phoneInput.value = '';
+      modalPhoneInput.value = '';
+      phoneInput.value += '+7(';
+      modalPhoneInput.value += '+7(';
+    }
+  };
 
 
-phoneInput.addEventListener('input', checkPhoneInput);
-phoneInput.addEventListener('focus', whenFocusPhone);
-phoneInput.addEventListener('input', checkNumPhone);
-phoneInput.addEventListener('keydown', checkPhoneKey);
-phoneInput.addEventListener('keydown', backspaceClickHandler);
+  phoneInput.addEventListener('input', checkPhoneInput);
+  phoneInput.addEventListener('focus', whenFocusPhone);
+  phoneInput.addEventListener('input', checkNumPhone);
+  phoneInput.addEventListener('keydown', checkPhoneKey);
+  phoneInput.addEventListener('keydown', backspaceClickHandler);
 
-modalPhoneInput.addEventListener('input', checkModalPhoneInput);
-modalPhoneInput.addEventListener('focus', whenFocusPhone);
-modalPhoneInput.addEventListener('input', checkNumPhone);
-modalPhoneInput.addEventListener('keydown', checkPhoneKey);
-modalPhoneInput.addEventListener('keydown', backspaceClickHandler);
-  
+  modalPhoneInput.addEventListener('input', checkModalPhoneInput);
+  modalPhoneInput.addEventListener('focus', whenFocusPhone);
+  modalPhoneInput.addEventListener('input', checkNumPhone);
+  modalPhoneInput.addEventListener('keydown', checkPhoneKey);
+  modalPhoneInput.addEventListener('keydown', backspaceClickHandler);
+
 })();
-
-

@@ -145,15 +145,15 @@
     color: $blue;
   }
 
+  .navigation__contactstablet--mail {
+    padding-right: 20px;
+  }
+
   .navigation__contactstablet--mail:hover,
   .navigation__contactstablet--mail:focus,
   .navigation__contactstablet--phone:hover,
   .navigation__contactstablet--phone:focus {
     opacity: 0.5;
-  }
-
-  .navigation__contactstablet--mail {
-    padding-right: 20px;
   }
 
   .navigation__logowrapper {

@@ -196,7 +196,6 @@ form button {
   left: -30px;
   background-image: url("../img/checkbox.svg");
   background-repeat: no-repeat;
-
 }
 
 .form__main-checkbox:checked + .form__main-checkboxtext {
@@ -232,14 +231,13 @@ form button {
   height: 373px;
 }
 
-
 @media (max-width: $max-tablet-width) {
   .form__inner {
     padding-top: 83px;
     padding-bottom: 103px;
     justify-content: center;
   }
-  
+
   .form__imagewrapper,
   .form__inner::after,
   .form__inner::before {
@@ -309,7 +307,7 @@ form button {
   .form__main-text {
     width: 290px;
   }
- 
+
   .form__mainlowerpart {
     flex-direction: column;
   }
@@ -317,7 +315,7 @@ form button {
   .form__main-checkboxtext {
     left: 5px;
   }
-  
+
   .form__main-checkboxlabel {
     padding-left: 30px;
   }

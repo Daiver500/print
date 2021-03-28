@@ -168,7 +168,7 @@
     padding-top: 40px;
     padding-bottom: 163px;
   }
-  
+
   .information__inner::before {
     right: -229px;
     top: 10px;
@@ -204,22 +204,22 @@
     top: 8px;
     right: 264px;
   }
-  
+
   .information__dot2 {
     display: none;
   }
-  
+
   .information__dot3 {
     bottom: 200px;
     right: 164px;
   }
-  
+
   .information__dot4 {
     top: 162px;
     right: 290px;
     z-index: -1;
   }
-  
+
   .information__dot5 {
     bottom: 200px;
     right: 49px;
@@ -286,11 +286,6 @@
     left: 55%;
   }
 
-  .information__inner::before,
-  .information__inner::after {
-   // opacity: 0.2;
-  }
-
   .information__inner::before {
     right: -358px;
     top: 5px;
@@ -307,8 +302,7 @@
     height: 280px;
     background-image: url("../img/informationpolygonsmall-mobile.svg");
   }
-  
-  
+
   .information__dot5,
   .information__dot1,
   .information__dot3,
@@ -330,7 +324,7 @@
     bottom: 221px;
     right: 20px;
   }
-  
+
   .informationmain__dot2 {
     top: 2px;
     right: 107px;
