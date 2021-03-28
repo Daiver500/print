@@ -81,18 +81,20 @@ const scrollButtonsClickHandler = (evt) => {
     if(evt.target.value.length === 6) {
         evt.target.value += ')';
     }
+    if(evt.target.value.length < 14) {
+
+    }
 };
 
-const keyHandler = (evt) => {
-    let telInp = document.querySelector(".form__main-phone");
+const backspaceKeyHandler = (evt) => {
     if (evt.key === `Backspace`) {
         telInp.value = '';
         evt.preventDefault();
     }
-}
+};
 
   
-  telInp.addEventListener('keydown', keyHandler);
+  telInp.addEventListener('keydown', backspaceKeyHandler);
   telInp.addEventListener('keydown', checkPhoneKey);
   telInp.addEventListener('focus', whenFocusPhone);
   telInp.addEventListener('input', checkNumPhone);
