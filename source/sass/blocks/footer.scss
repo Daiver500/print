@@ -82,8 +82,6 @@
   line-height: 14px;
 }
 
-
-
 .footer__textmain {
   padding-left: 16px;
 }
@@ -155,8 +153,6 @@
   padding-right: 10%;
 }
 
-
-
 .copyright__text {
   margin-top: 0;
   margin-bottom: 0;
@@ -165,7 +161,6 @@
   text-transform: uppercase;
   color: $light-black;
 }
-
 
 .map__button--open,
 .contacts__button--open {
@@ -196,7 +191,7 @@
     padding-right: 25px;
     justify-items: unset;
   }
-  
+
   .footer__social {
     flex-direction: row;
     grid-column-start: 1;
@@ -218,7 +213,7 @@
   .social__list {
     padding-top: 15px;
   }
-  
+
   .social__date {
     display: block;
     margin-top: 0;
