@@ -62,48 +62,66 @@ const scrollButtonsClickHandler = (evt) => {
   footerMapButtonClose.addEventListener("click",hideFooterMapLists);
   footerContactsButtonOpen.addEventListener("click", showFooterContactsLists );
   footerContactsButtonClose.addEventListener("click", hideFooterContactsLists);
-
-  //Маска для телефона
-
-  let telInp = document.querySelector(".form__main-phone");
-  //контроль количества введенных цифр
-  let howDigits = str => str.split('').filter(el => /\d/.test(el)).length;
-  //при фокусе подставляем +7(
-  let whenFocusPhone = (evt) => evt.target.value = '+7(';
   
 
-  //чтоб вводились только цифры
-  let checkPhoneKey = (key) => key >= '0' && key <= '9';
-  let checkNumPhone = (evt) => {
+  // Маска
+
+let phoneInput = document.querySelector(".form__main-phone");
+let modalPhoneInput = document.querySelector(".modal__phone");
+  //контроль количества введенных цифр
+let howDigits = str => str.split('').filter(el => /\d/.test(el)).length;
+//при фокусе подставляем +7(
+let whenFocusPhone = (evt) => evt.target.value = '+7(';
+//чтоб вводились только цифры
+let checkPhoneKey = (key) => key >= '0' && key <= '9';
+let checkNumPhone = (evt) => {
     if(!checkPhoneKey(evt.target.value[evt.target.value.length - 1]) || howDigits(evt.target.value) > 11) {
         evt.target.value = evt.target.value.slice(0, -1);
-    }
+    };
     if(evt.target.value.length === 6) {
         evt.target.value += ')';
     }
-    if(evt.target.value.length < 14) {
+        if(evt.target.value.length === 2) {
+        evt.target.value += '(';
+        }
+    };
 
-    }
+    const checkPhoneInput = () => {
+      if(phoneInput.value.length < 14) {
+        phoneInput.setCustomValidity("Номер должен быть из 10 цифр");
+        } else {phoneInput.setCustomValidity(``);}
+        phoneInput.reportValidity();
+    };
+
+    const checkModalPhoneInput = () => {
+      if(modalPhoneInput.value.length < 14) {
+        modalPhoneInput.setCustomValidity("Номер должен быть из 10 цифр");
+        } else {modalPhoneInput.setCustomValidity(``);}
+        modalPhoneInput.reportValidity();
+    };
+
+const backspaceClickHandler = (evt) => {
+  if (evt.key === `Backspace`) {
+    phoneInput.value = '';
+    modalPhoneInput.value = '';
+    phoneInput.value += '+7(';
+    modalPhoneInput.value += '+7(';
+  }
 };
 
-const backspaceKeyHandler = (evt) => {
-    if (evt.key === `Backspace`) {
-        telInp.value = '';
-        evt.preventDefault();
-    }
-};
 
+phoneInput.addEventListener('input', checkPhoneInput);
+phoneInput.addEventListener('focus', whenFocusPhone);
+phoneInput.addEventListener('input', checkNumPhone);
+phoneInput.addEventListener('keydown', checkPhoneKey);
+phoneInput.addEventListener('keydown', backspaceClickHandler);
+
+modalPhoneInput.addEventListener('input', checkModalPhoneInput);
+modalPhoneInput.addEventListener('focus', whenFocusPhone);
+modalPhoneInput.addEventListener('input', checkNumPhone);
+modalPhoneInput.addEventListener('keydown', checkPhoneKey);
+modalPhoneInput.addEventListener('keydown', backspaceClickHandler);
   
-  telInp.addEventListener('keydown', backspaceKeyHandler);
-  telInp.addEventListener('keydown', checkPhoneKey);
-  telInp.addEventListener('focus', whenFocusPhone);
-  telInp.addEventListener('input', checkNumPhone);
- 
-
-/*document.getElementById('tel-inp').addEventListener('input', (e) => {
-    let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,2})(\d{0,2})/);
-    e.target.value = !x[2] ? x[1] : '(' + x[1] + ')' + x[2] + (x[3] ? '-' + x[3] : '') + (x[4] ? '-' + x[4] : '');
-  });*/
-  
-
 })();
+
+
