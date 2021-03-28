@@ -113,8 +113,13 @@
   const backspaceClickHandler = (evt) => {
     if (evt.key === `Backspace`) {
       phoneInput.value = '';
-      modalPhoneInput.value = '';
       phoneInput.value += '+7(';
+    }
+  };
+
+  const backspaceModalClickHandler = (evt) => {
+    if (evt.key === `Backspace`) {
+      modalPhoneInput.value = '';
       modalPhoneInput.value += '+7(';
     }
   };
@@ -130,6 +135,6 @@
   modalPhoneInput.addEventListener('focus', whenFocusPhone);
   modalPhoneInput.addEventListener('input', checkNumPhone);
   modalPhoneInput.addEventListener('keydown', checkPhoneKey);
-  modalPhoneInput.addEventListener('keydown', backspaceClickHandler);
+  modalPhoneInput.addEventListener('keydown', backspaceModalClickHandler);
 
 })();
