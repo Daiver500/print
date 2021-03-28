@@ -1,11 +1,11 @@
 {
-  "name": "velosipedi",
+  "name": "print",
   "private": true,
-  "description": "Личный проект Велосипеды",
+  "description": "платы",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.0.0",
     "autoprefixer": "9.8.4",
-    "browser-sync": "^2.26.10",
+    "browser-sync": "^2.26.14",
     "del": "^5.1.0",
     "eslint": "^7.20.0",
     "eslint-config-airbnb-base": "^14.2.1",
@@ -25,6 +25,8 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
+    "imagemin-webp": "^6.0.0",
+    "jshint": "^2.12.0",
     "node-sass": "4.14.1",
     "posthtml-include": "^1.4.3",
     "stylelint": "13.6.1",
@@ -34,7 +36,7 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "gulp build",
+    "build": "gulp build && gulp webp",
     "start": "gulp build && gulp"
   },
   "browserslist": [
@@ -52,5 +54,6 @@
   ],
   "engines": {
     "node": "12.18.2"
-  }
+  },
+  "dependencies": {}
 }

@@ -8,11 +8,11 @@ const sync = require("browser-sync").create();
 const csso = require("gulp-csso");
 const rename = require("gulp-rename");
 const imagemin = require("gulp-imagemin");
-const webp = require("gulp-webp");
-const svgstore = require("gulp-svgstore");
+const webp = require("imagemin-webp");
 const del = require("del");
 const posthtml = require("gulp-posthtml");
 const include = require("posthtml-include");
+
 
 // Styles
 
@@ -49,24 +49,25 @@ exports.images = images;
 
 //Webp
 
-const imageswebp = () => {
-  return gulp.src("source/img/**/*.{png,jpg}")
-    .pipe(webp({quality: 90}))
+gulp.task("imgsWebp", function() {
+  return gulp.src("source/img/**/*.{jpg,jpeg,png,gif,ico}")
+
+    // Конвертирует изображение в webp и сжимает его.
+    .pipe(webp({
+      quality: 90
+    }))
+
+    // Выгрузка.
     .pipe(gulp.dest("build/img"))
-}
+});
 
-exports.imageswebp = imageswebp;
+//const imageswebp = () => {
+ // return gulp.src("source/img/**/*.{png,jpg}")
+  // .pipe(webp({quality: 90}))
+    //.pipe(gulp.dest("build/img"))
+//}
 
-//SVG sprite
-
-const sprite = () => {
-  return gulp.src("source/img/sprite/icon-*.svg")
-    .pipe(svgstore())
-    .pipe(rename("sprite.svg"))
-    .pipe(gulp.dest("build/img"))
-}
-
-exports.sprite = sprite;
+//exports.imageswebp = imageswebp;
 
 //HTML
 
@@ -87,7 +88,6 @@ const copy = () => {
     "source/fonts/**/*.{woff,woff2}",
     "source/img/**",
     "source/js/**",
-    "source/*.ico",
     "source/*.html"
   ], {
     base: "source"
@@ -112,9 +112,8 @@ const build = () => gulp.series (
   copy,
   styles,
   images,
-  sprite,
   htmlinclude,
-  imageswebp,
+  //imageswebp
 );
 
 exports.build = build();
@@ -147,6 +146,7 @@ const html = () => {
 };
 
 exports.html = html;
+
 
 // Watcher
 
