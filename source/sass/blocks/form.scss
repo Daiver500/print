@@ -21,11 +21,11 @@
   background-position: 0 50%;
 }
 
-.form__image-wrapper {
-  z-index: 1;
-  overflow: hidden;
-  margin-top: 161px;
-}
+//.form__image-wrapper {
+ // z-index: 1;
+ // overflow: hidden;
+ // margin-top: 161px;
+//}
 
 .form__inner::before,
 .form__inner::after {
@@ -218,8 +218,7 @@ form button {
     margin-bottom: 51px;
   }
 
-  .form__main-name,
-  .form__main-phone {
+  .form__main-information input {
     min-width: 290px;
     padding: 16px;
   }

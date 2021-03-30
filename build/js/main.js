@@ -257,5 +257,4 @@
     mainFormPhoneInput.value = "";
     mainFormTextInput.value = "";
   });
-
 })();
