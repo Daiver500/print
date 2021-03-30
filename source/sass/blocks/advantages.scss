@@ -1,7 +1,7 @@
 .advantages-and-about {
   margin-bottom: 108px;
   margin-top: 108px;
-  background-image: url("../img/advantagespolygonbig.svg");
+  background-image: url("../img/advantages-polygon-big.svg");
   background-repeat: no-repeat;
   background-position: 50% 30%;
 }
@@ -43,14 +43,14 @@
   content: "";
   left: -151px;
   top: -73px;
-  background-image: url("../img/advantagespolygon.svg");
+  background-image: url("../img/advantages-polygon.svg");
 }
 
 .advantages__inner::after {
   content: "";
   right: -340px;
   bottom: 0;
-  background-image: url("../img/advantagespolygon.svg");
+  background-image: url("../img/advantages-polygon.svg");
   transform: rotate(180deg);
 }
 
