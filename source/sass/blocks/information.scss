@@ -70,18 +70,18 @@
 .information__inner::before {
   content: "";
   right: 0;
-  top: 10px;
+  top: -129px;
   width: 636px;
-  height: 636px;
+  height: 640px;
   background-image: url("../img/information-polygon-big.svg");
 }
 
 .information__inner::after {
   content: "";
   right: 359px;
-  bottom: 49px;
+  bottom: 162px;
   width: 373px;
-  height: 373px;
+  height: 379px;
   background-image: url("../img/information-polygon-small.svg");
 }
 
@@ -123,43 +123,6 @@
   color: $blue;
 }
 
-.information__dot1,
-.information__dot2,
-.information__dot3,
-.information__dot4,
-.information__dot5 {
-  width: 10px;
-  height: 10px;
-  background: $white;
-  border-radius: 50%;
-  position: absolute;
-}
-
-.information__dot1 {
-  top: 8px;
-  right: 82px;
-}
-
-.information__dot2 {
-  top: 8px;
-  right: 627px;
-}
-
-.information__dot3 {
-  bottom: 143px;
-  right: 356px;
-}
-
-.information__dot4 {
-  top: 203px;
-  right: 727px;
-}
-
-.information__dot5 {
-  bottom: 141px;
-  right: 565px;
-}
-
 .information__button-textmobile {
   display: none;
 }
@@ -191,40 +154,6 @@
   .information__image {
     width: 465px;
     height: 340px;
-  }
-
-  .information__dot1,
-  .information__dot2,
-  .information__dot3,
-  .information__dot4,
-  .information__dot5 {
-    width: 8px;
-    height: 8px;
-  }
-
-  .information__dot1 {
-    top: 8px;
-    right: 264px;
-  }
-
-  .information__dot2 {
-    display: none;
-  }
-
-  .information__dot3 {
-    bottom: 200px;
-    right: 164px;
-  }
-
-  .information__dot4 {
-    top: 162px;
-    right: 290px;
-    z-index: -1;
-  }
-
-  .information__dot5 {
-    bottom: 200px;
-    right: 49px;
   }
 
   .information__main {
@@ -303,38 +232,6 @@
     width: 280px;
     height: 280px;
     background-image: url("../img/information-polygon-small-mobile.svg");
-  }
-
-  .information__dot5,
-  .information__dot1,
-  .information__dot3,
-  .information__dot4 {
-    display: none;
-  }
-
-  .information__inner-dot1,
-  .information__inner-dot2,
-  .information__inner-dot3 {
-    width: 8px;
-    height: 8px;
-    background: $white;
-    border-radius: 50%;
-    position: absolute;
-  }
-
-  .information__inner-dot1 {
-    bottom: 221px;
-    right: 20px;
-  }
-
-  .information__inner-dot2 {
-    top: 2px;
-    right: 107px;
-  }
-
-  .information__inner-dot3 {
-    top: 139px;
-    right: 142px;
   }
 
   .information__header {

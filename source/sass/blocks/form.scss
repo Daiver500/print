@@ -16,6 +16,9 @@
   padding-bottom: 114px;
   justify-content: space-between;
   position: relative;
+  background-image: url("../img/plane.png");
+  background-repeat: no-repeat;
+  background-position: 0 50%;
 }
 
 .form__image-wrapper {
@@ -33,57 +36,20 @@
 
 .form__inner::before {
   content: "";
-  left: -37px;
-  bottom: -100px;
+  left: -110px;
+  bottom: 77px;
   width: 636px;
-  height: 636px;
+  height: 640px;
   background-image: url("../img/form-polygon-big.svg");
 }
 
 .form__inner::after {
   content: "";
-  left: -87px;
-  bottom: -29px;
+  left: -109px;
+  bottom: 71px;
   width: 373px;
-  height: 373px;
+  height: 378px;
   background-image: url("../img/form-polygon-small.svg");
-}
-
-.form__dot1,
-.form__dot2,
-.form__dot3,
-.form__dot4,
-.form__dot5 {
-  width: 10px;
-  height: 10px;
-  background: $white;
-  border-radius: 50%;
-  position: absolute;
-}
-
-.form__dot1 {
-  top: 192px;
-  left: -40px;
-}
-
-.form__dot2 {
-  top: 192px;
-  left: 505px;
-}
-
-.form__dot3 {
-  bottom: 56px;
-  left: 234px;
-}
-
-.form__dot4 {
-  bottom: 335px;
-  left: -90px;
-}
-
-.form__dot5 {
-  bottom: 57px;
-  left: 70px;
 }
 
 .form__image {
@@ -129,8 +95,7 @@ form textarea {
   color: $white;
 }
 
-.form__main-name,
-.form__main-phone {
+.form__main-information input {
   min-width: 270px;
   padding: 16px;
 }
@@ -216,18 +181,17 @@ form button {
   content: "";
   left: 600px;
   top: -73px;
-  background-image: url("../img/form-polygon1.svg");
+  background-image: url("../img/form-polygon-left.svg");
   width: 262px;
   height: 262px;
 }
 
 .form__main::after {
   content: "";
-  right: -515px;
+  right: -580px;
   bottom: 0;
-  background-image: url("../img/form-polygon-small.svg");
-  transform: rotate(270deg);
-  width: 373px;
+  background-image: url("../img/form-polygon-right.svg");
+  width: 436px;
   height: 373px;
 }
 
@@ -236,6 +200,7 @@ form button {
     padding-top: 83px;
     padding-bottom: 103px;
     justify-content: center;
+    background-image: unset;
   }
 
   .form__image-wrapper,
