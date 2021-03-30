@@ -389,24 +389,24 @@ template {
   width: 52px;
   height: 52px; }
 
-.navigation__logowrapper {
+.navigation__logo-wrapper {
   display: flex; }
 
-.navigation__textmain {
+.navigation__text-main {
   padding-left: 16px; }
 
-.navigation__logotext,
-.navigation__logoheader {
+.navigation__logo-text,
+.navigation__logo-header {
   margin: 0; }
 
-.navigation__logoheader {
+.navigation__logo-header {
   font-family: RobotoCondensed;
   font-weight: 700;
   color: #ffffff;
   font-size: 25px;
   line-height: 29px; }
 
-.navigation__logotext {
+.navigation__logo-text {
   font-family: RobotoCondensed;
   font-weight: 500;
   color: #788891;
@@ -474,7 +474,7 @@ template {
   height: 27px;
   background-image: url("../img/email.svg"); }
 
-.navigation__contactstablet {
+.navigation__contacts-tablet {
   display: none; }
 
 @media (max-width: 1023px) {
@@ -483,26 +483,26 @@ template {
     padding-bottom: 0; }
   .navigation__contacts {
     display: none; }
-  .navigation__contactstablet {
+  .navigation__contacts-tablet {
     display: block;
     padding-right: 40px; }
-  .navigation__contactstablet--mail svg,
-  .navigation__contactstablet--phone svg {
+  .navigation__contacts-tablet--mail svg,
+  .navigation__contacts-tablet--phone svg {
     color: #00B2FF; }
-  .navigation__contactstablet--mail:hover,
-  .navigation__contactstablet--mail:focus,
-  .navigation__contactstablet--phone:hover,
-  .navigation__contactstablet--phone:focus {
+  .navigation__contacts-tablet--mail:hover,
+  .navigation__contacts-tablet--mail:focus,
+  .navigation__contacts-tablet--phone:hover,
+  .navigation__contacts-tablet--phone:focus {
     opacity: 0.5; }
-  .navigation__contactstablet--mail {
+  .navigation__contacts-tablet--mail {
     padding-right: 20px; }
-  .navigation__logowrapper {
+  .navigation__logo-wrapper {
     padding-left: 20px; } }
 
 @media (max-width: 767px) {
-  .navigation__textmain {
+  .navigation__text-main {
     display: none; }
-  .navigation__contactstablet {
+  .navigation__contacts-tablet {
     padding-right: 20px; } }
 
 .information__inner {
@@ -555,7 +555,7 @@ template {
   width: 705px;
   height: 515px; }
 
-.information__imagewrapper {
+.information__image-wrapper {
   overflow: hidden;
   z-index: 1; }
 
@@ -726,7 +726,7 @@ template {
   .information__image {
     width: 301px;
     height: 220px; }
-  .information__imagewrapper {
+  .information__image-wrapper {
     position: absolute;
     top: 20px;
     transform: translateX(-50%);
@@ -793,7 +793,7 @@ template {
     max-width: 408px;
     margin-left: 0 auto; } }
 
-.advantagesandabout {
+.advantages-and-about {
   margin-bottom: 108px;
   margin-top: 108px;
   background-image: url("../img/advantagespolygonbig.svg");
@@ -891,7 +891,7 @@ template {
   color: #666666; }
 
 @media (max-width: 1023px) {
-  .advantagesandabout {
+  .advantages-and-about {
     margin-top: 54px;
     background-position: -171% 64%; }
   .advantages__inner {
@@ -905,7 +905,7 @@ template {
     padding: 40px 25px 49px 44px; } }
 
 @media (max-width: 767px) {
-  .advantagesandabout {
+  .advantages-and-about {
     margin-top: 37px; }
   .advantages__list {
     grid-template-columns: 1fr;
@@ -974,7 +974,7 @@ template {
   height: 317px; }
 
 @media (max-width: 1023px) {
-  .advantagesandabout {
+  .advantages-and-about {
     margin-bottom: 83px; }
   .about__image {
     width: 227px;
@@ -992,13 +992,13 @@ template {
     padding: 14px 55px; } }
 
 @media (max-width: 767px) {
-  .advantagesandabout {
+  .advantages-and-about {
     margin-bottom: 60px;
     background-position: 20% 80%; }
   .about__inner {
     padding-left: 15px;
     padding-right: 15px; }
-  .about__imagewrapper {
+  .about__image-wrapper {
     display: none; }
   .advantages__list {
     justify-items: unset; }
@@ -1122,7 +1122,7 @@ template {
   justify-content: space-between;
   position: relative; }
 
-.form__imagewrapper {
+.form__image-wrapper {
   z-index: 1;
   overflow: hidden;
   margin-top: 161px; }
@@ -1253,7 +1253,7 @@ form button {
   background-color: #ffffff;
   color: #00B2FF; }
 
-.form__mainlowerpart {
+.form__main-lowerpart {
   display: flex;
   justify-content: space-between; }
 
@@ -1316,7 +1316,7 @@ form button {
     padding-top: 83px;
     padding-bottom: 103px;
     justify-content: center; }
-  .form__imagewrapper,
+  .form__image-wrapper,
   .form__inner::after,
   .form__inner::before {
     display: none; }
@@ -1360,7 +1360,7 @@ form button {
     margin-bottom: 30px; }
   .form__main-text {
     width: 290px; }
-  .form__mainlowerpart {
+  .form__main-lowerpart {
     flex-direction: column; }
   .form__main-checkboxtext {
     left: 5px; }
@@ -1549,7 +1549,7 @@ form button {
     margin-top: 0;
     margin-bottom: 0;
     opacity: 0.5; }
-  .social__datetext {
+  .social__date-text {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 15px;
@@ -1589,8 +1589,8 @@ form button {
   .map__button--open,
   .contacts__button--open {
     display: block; }
-  .map__titleandbuttons,
-  .contacts__titleandbuttons {
+  .map__title-and-buttons,
+  .contacts__title-and-buttons {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; }
@@ -1614,7 +1614,7 @@ form button {
     top: -38px; } }
 
 .modal__inner,
-.modalsuccess__inner {
+.modal-success__inner {
   display: flex;
   width: 490px;
   min-height: 605px;
@@ -1630,7 +1630,7 @@ form button {
   background-color: #00B2FF; }
 
 .modal,
-.modalsuccess {
+.modal-success {
   position: fixed;
   display: flex;
   justify-content: center;
@@ -1702,19 +1702,19 @@ form button {
   background-color: #ffffff;
   color: #00B2FF; }
 
-.modalsuccess__title {
+.modal-success__title {
   margin: 0 auto;
   display: flex;
   align-items: center;
   max-width: 380px; }
 
-.modalsuccess__text {
+.modal-success__text {
   color: #ffffff;
   font-size: 24px;
   line-height: 31px; }
 
 .modal__close,
-.modalsuccess__close {
+.modal-success__close {
   position: absolute;
   top: 20px;
   right: 20px;
@@ -1761,7 +1761,7 @@ form button {
 
 @media (max-width: 767px) {
   .modal__inner,
-  .modalsuccess__inner {
+  .modal-success__inner {
     width: 100%;
     justify-content: center; }
   .modal__data {

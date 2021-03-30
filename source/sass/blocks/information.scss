@@ -23,7 +23,7 @@
 
 .information__header {
   margin-bottom: 30px;
-  font-family: RobotoCondensed;
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
@@ -55,7 +55,7 @@
   height: 515px;
 }
 
-.information__imagewrapper {
+.information__image-wrapper {
   overflow: hidden;
   z-index: 1;
 }
@@ -86,7 +86,7 @@
 }
 
 .information__button {
-  font-family: RobotoCondensed;
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-weight: 700;
   color: $white;
   font-size: 16px;
@@ -114,6 +114,8 @@
   opacity: 0.5;
   color: $grey;
   cursor: pointer;
+  background-color: inherit;
+  border: none;
 }
 
 .information__scroll:hover,
@@ -158,7 +160,7 @@
   right: 565px;
 }
 
-.information__buttonmobile {
+.information__button-textmobile {
   display: none;
 }
 
@@ -279,7 +281,7 @@
     height: 220px;
   }
 
-  .information__imagewrapper {
+  .information__image-wrapper {
     position: absolute;
     top: 20px;
     transform: translateX(-50%);
@@ -310,9 +312,9 @@
     display: none;
   }
 
-  .informationmain__dot1,
-  .informationmain__dot2,
-  .informationmain__dot3 {
+  .information__inner-dot1,
+  .information__inner-dot2,
+  .information__inner-dot3 {
     width: 8px;
     height: 8px;
     background: $white;
@@ -320,17 +322,17 @@
     position: absolute;
   }
 
-  .informationmain__dot1 {
+  .information__inner-dot1 {
     bottom: 221px;
     right: 20px;
   }
 
-  .informationmain__dot2 {
+  .information__inner-dot2 {
     top: 2px;
     right: 107px;
   }
 
-  .informationmain__dot3 {
+  .information__inner-dot3 {
     top: 139px;
     right: 142px;
   }
@@ -348,24 +350,11 @@
     line-height: 25px;
   }
 
-  .information__button {
+  .information__button-text {
     display: none;
   }
 
-  .information__buttonmobile {
+  .information__button-textmobile {
     display: block;
-    font-family: RobotoCondensed;
-    font-weight: 700;
-    color: $white;
-    font-size: 16px;
-    line-height: 19px;
-    padding: 17px 28px;
-    background-color: $blue;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    text-transform: uppercase;
-    max-width: 408px;
-    margin-left: 0 auto;
   }
 }

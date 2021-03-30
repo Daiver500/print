@@ -55,6 +55,10 @@
   display: none;
 }
 
+.footer__logo {
+  display: flex;
+}
+
 .footer__logoheader,
 .footer__logotext {
   margin-top: 0;
@@ -67,7 +71,7 @@
 }
 
 .footer__logoheader {
-  font-family: RobotoCondensed;
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-weight: 700;
   color: $black;
   font-size: 25px;
@@ -75,7 +79,7 @@
 }
 
 .footer__logotext {
-  font-family: RobotoCondensed;
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-weight: 500;
   color: $grey;
   font-size: 12px;
@@ -90,7 +94,7 @@
 .contacts__title {
   margin-top: 0;
   margin-bottom: 29px;
-  font-family: RobotoCondensed;
+  font-family: RobotoCondensed, Arial, sans-serif;
   color: $light-black;
   font-size: 15px;
   line-height: 16px;
@@ -221,7 +225,7 @@
     opacity: 0.5;
   }
 
-  .social__datetext {
+  .social__date-text {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 15px;
@@ -283,8 +287,8 @@
     display: block;
   }
 
-  .map__titleandbuttons,
-  .contacts__titleandbuttons {
+  .map__title-and-buttons,
+  .contacts__title-and-buttons {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;

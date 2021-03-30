@@ -137,4 +137,125 @@
   modalPhoneInput.addEventListener('keydown', checkPhoneKey);
   modalPhoneInput.addEventListener('keydown', backspaceModalClickHandler);
 
+  // Модальное окно
+
+  const mainForm = document.querySelector(".form__main-data");
+  const mainFormNameInput = document.querySelector(".form__main-name");
+  const mainFormPhoneInput = document.querySelector(".form__main-phone");
+  const mainFormTextInput = document.querySelector(".form__main-text");
+  const modalForm = document.querySelector(".modal__form");
+  //const phoneInput = document.querySelector(".modal__phone");
+  const nameInput = document.querySelector(".modal__name");
+  const textInput = document.querySelector(".modal__text");
+  const openModalButton = document.querySelector(".navigation__button");
+  const closeModalButton = document.querySelector(".modal__close");
+  const modalMain = document.querySelector(".modal");
+  //const modalInner = document.querySelector(".modal__inner");
+  const modalSuccess = document.querySelector(".modal-success");
+  const closemodalSuccessButton = document.querySelector(".modal-success__close");
+  //const modal-successInner = document.querySelector(".modal-success__inner");
+
+
+  const modalEscPressHandler = (evt) => {
+    if (evt.key === `Escape`) {
+      closeModal();
+      evt.preventDefault();
+    }
+  };
+
+  const windowClickHandler = (evt) => {
+    if (evt.target === modalMain) {
+      console.log(evt.target);
+      closeModal();
+    }
+  };
+
+  const focusPhoneInput = () => {
+    phoneInput.focus();
+  };
+
+
+  const openModal = () => {
+    modalMain.classList.remove("hidden");
+    focusPhoneInput();
+    closeModalButton.addEventListener("click", closeModalButtonClickHandler);
+    modalMain.addEventListener("click", windowClickHandler);
+    document.addEventListener("keydown", modalEscPressHandler);
+    modalForm.addEventListener("submit", formSendingHandler);
+  };
+
+  const closeModal = () => {
+    modalMain.classList.add("hidden");
+    closeModalButton.removeEventListener("click", openModalButtonClickHandler);
+    modalMain.removeEventListener("click", windowClickHandler);
+    document.removeEventListener("keydown", modalEscPressHandler);
+    modalForm.removeEventListener("submit", formSendingHandler);
+  };
+
+  const openModalButtonClickHandler = () => {
+    openModal();
+  };
+
+  const closeModalButtonClickHandler = () => {
+    closeModal();
+  };
+
+  openModalButton.addEventListener("click", openModalButtonClickHandler);
+  closeModalButton.addEventListener("click", closeModalButtonClickHandler);
+
+
+  const modalSuccessEscPressHandler = (evt) => {
+    if (evt.key === `Escape`) {
+      closeSuccessModal();
+      evt.preventDefault();
+    }
+  };
+
+  const windowSuccessClickHandler = (evt) => {
+    if (evt.target === modalSuccess) {
+      console.log(evt.target);
+      closeSuccessModal();
+    }
+  };
+
+  const openSuccessModal = () => {
+    modalMain.classList.add("hidden");
+    modalSuccess.classList.remove("hidden");
+    modalSuccess.addEventListener("click", windowSuccessClickHandler);
+    closemodalSuccessButton.addEventListener("click", closemodalSuccessButtonClickHandler);
+    document.addEventListener("keydown", modalSuccessEscPressHandler);
+  };
+
+  const closeSuccessModal = () => {
+    modalSuccess.classList.add("hidden");
+    closemodalSuccessButton.addEventListener("click", closemodalSuccessButtonClickHandler);
+    modalSuccess.removeEventListener("click", windowSuccessClickHandler);
+    document.removeEventListener("keydown", modalSuccessEscPressHandler);
+  };
+
+  const closemodalSuccessButtonClickHandler = () => {
+    closeSuccessModal();
+  };
+
+  closemodalSuccessButton.addEventListener("click", closemodalSuccessButtonClickHandler);
+
+  const formSendingHandler = (evt) => {
+    phoneInput.value = "";
+    nameInput.value = "";
+    textInput.value = "";
+    openSuccessModal();
+    evt.preventDefault();
+  };
+
+  mainForm.addEventListener("submit", function (evt) {
+    modalSuccess.classList.remove("hidden");
+    evt.preventDefault();
+    closemodalSuccessButton.addEventListener("click", closemodalSuccessButtonClickHandler);
+    document.addEventListener("keydown", modalSuccessEscPressHandler);
+    document.addEventListener("click", windowSuccessClickHandler);
+    mainFormNameInput.value = "";
+    mainFormPhoneInput.value = "";
+    mainFormTextInput.value = "";
+  });
+
 })();

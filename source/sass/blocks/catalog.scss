@@ -11,7 +11,7 @@
 .catalog__title {
   margin-top: 0;
   margin-bottom: 47px;
-  font-family: RobotoCondensed;
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-size: 36px;
   line-height: 51px;
   color: $white;
@@ -58,7 +58,7 @@
 }
 
 .catalog__link span {
-  font-family: RobotoCondensed;
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-size: 20px;
   line-height: 30px;
   max-width: 160px;
@@ -72,6 +72,7 @@
   bottom: 0;
   right: 0;
   border: none;
+  cursor: pointer;
 }
 
 @media (max-width: $max-tablet-width) {

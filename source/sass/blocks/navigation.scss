@@ -17,33 +17,32 @@
 .navigation__logo svg,
 .navigation__logo {
   color: $blue;
-  width: 52px;
-  height: 52px;
-}
-
-.navigation__logowrapper {
   display: flex;
 }
 
-.navigation__textmain {
+.navigation__logo-wrapper {
+  display: flex;
+}
+
+.navigation__text-main {
   padding-left: 16px;
 }
 
-.navigation__logotext,
-.navigation__logoheader {
+.navigation__logo-text,
+.navigation__logo-header {
   margin: 0;
 }
 
-.navigation__logoheader {
-  font-family: RobotoCondensed;
+.navigation__logo-header {
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-weight: 700;
   color: $white;
   font-size: 25px;
   line-height: 29px;
 }
 
-.navigation__logotext {
-  font-family: RobotoCondensed;
+.navigation__logo-text {
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-weight: 500;
   color: $grey;
   font-size: 12px;
@@ -78,7 +77,7 @@
 }
 
 .navigation__button {
-  font-family: RobotoCondensed;
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-weight: 700;
   color: $white;
   font-size: 14px;
@@ -89,6 +88,7 @@
   border-radius: 10px;
   cursor: pointer;
   text-transform: uppercase;
+  border: 1px solid $white;
 }
 
 .navigation__button:hover,
@@ -121,7 +121,7 @@
   background-image: url("../img/email.svg");
 }
 
-.navigation__contactstablet {
+.navigation__contacts-tablet {
   display: none;
 }
 
@@ -135,38 +135,38 @@
     display: none;
   }
 
-  .navigation__contactstablet {
+  .navigation__contacts-tablet {
     display: block;
     padding-right: 40px;
   }
 
-  .navigation__contactstablet--mail svg,
-  .navigation__contactstablet--phone svg {
+  .navigation__contacts-tablet-mail svg,
+  .navigation__contacts-tablet-phone svg {
     color: $blue;
   }
 
-  .navigation__contactstablet--mail {
+  .navigation__contacts-tablet-mail {
     padding-right: 20px;
   }
 
-  .navigation__contactstablet--mail:hover,
-  .navigation__contactstablet--mail:focus,
-  .navigation__contactstablet--phone:hover,
-  .navigation__contactstablet--phone:focus {
+  .navigation__contacts-tablet-mail:hover,
+  .navigation__contacts-tablet-mail:focus,
+  .navigation__contacts-tablet-phone:hover,
+  .navigation__contacts-tablet-phone:focus {
     opacity: 0.5;
   }
 
-  .navigation__logowrapper {
+  .navigation__logo-wrapper {
     padding-left: 20px;
   }
 }
 
 @media (max-width: $max-mobile-width) {
-  .navigation__textmain {
+  .navigation__text-main {
     display: none;
   }
 
-  .navigation__contactstablet {
+  .navigation__contacts-tablet {
     padding-right: 20px;
   }
 }

@@ -18,7 +18,7 @@
   position: relative;
 }
 
-.form__imagewrapper {
+.form__image-wrapper {
   z-index: 1;
   overflow: hidden;
   margin-top: 161px;
@@ -103,7 +103,7 @@
 
 .form__title {
   margin-bottom: 7px;
-  font-family: RobotoCondensed;
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-size: 36px;
   line-height: 51px;
 }
@@ -148,7 +148,7 @@ form textarea::placeholder {
 }
 
 form button {
-  font-family: RobotoCondensed;
+  font-family: RobotoCondensed, Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -167,7 +167,7 @@ form button {
   color: $blue;
 }
 
-.form__mainlowerpart {
+.form__main-lowerpart {
   display: flex;
   justify-content: space-between;
 }
@@ -238,7 +238,7 @@ form button {
     justify-content: center;
   }
 
-  .form__imagewrapper,
+  .form__image-wrapper,
   .form__inner::after,
   .form__inner::before {
     display: none;
@@ -308,7 +308,7 @@ form button {
     width: 290px;
   }
 
-  .form__mainlowerpart {
+  .form__main-lowerpart {
     flex-direction: column;
   }
 
