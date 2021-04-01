@@ -13,11 +13,16 @@
           behavior: "smooth"
         });
         break;
-      case "information-buttonmobile":
+        case "information-button-text":
         form.scrollIntoView({
           behavior: "smooth"
         });
         break;
+        case "information-button-text-mobile":
+          form.scrollIntoView({
+            behavior: "smooth"
+          });
+          break;
       case "information-scroll":
         advantages.scrollIntoView({
           behavior: "smooth"
@@ -130,12 +135,18 @@
   phoneInput.addEventListener('input', checkNumPhone);
   phoneInput.addEventListener('keydown', checkPhoneKey);
   phoneInput.addEventListener('keydown', backspaceClickHandler);
+  phoneInput.addEventListener("click", function () {
+    phoneInput.selectionStart = 4;
+  });
 
   modalPhoneInput.addEventListener('input', checkModalPhoneInput);
   modalPhoneInput.addEventListener('focus', whenFocusPhone);
   modalPhoneInput.addEventListener('input', checkNumPhone);
   modalPhoneInput.addEventListener('keydown', checkPhoneKey);
   modalPhoneInput.addEventListener('keydown', backspaceModalClickHandler);
+  modalPhoneInput.addEventListener("click", function () {
+    modalPhoneInput.selectionStart = 4;
+  });
 
   // Модальное окно
 
@@ -154,7 +165,8 @@
   const modalSuccess = document.querySelector(".modal-success");
   const closemodalSuccessButton = document.querySelector(".modal-success__close");
   //const modal-successInner = document.querySelector(".modal-success__inner");
-
+  const modalNameInput = document.querySelector(".modal__name");
+  const formNameCheckbox = document.querySelector(".form__main-checkbox");
 
   const modalEscPressHandler = (evt) => {
     if (evt.key === `Escape`) {
@@ -170,14 +182,16 @@
     }
   };
 
-  const focusPhoneInput = () => {
-    phoneInput.focus();
-  };
+  //const modalNameInputFocus = () => {
+   // modalNameInput.focus();
+  //};
 
 
   const openModal = () => {
     modalMain.classList.remove("hidden");
-    focusPhoneInput();
+    document.body.style.overflow = "hidden";
+    mainFormNameInput.focus();
+    inputFocus();
     closeModalButton.addEventListener("click", closeModalButtonClickHandler);
     modalMain.addEventListener("click", windowClickHandler);
     document.addEventListener("keydown", modalEscPressHandler);
@@ -186,6 +200,7 @@
 
   const closeModal = () => {
     modalMain.classList.add("hidden");
+    document.body.style.overflow = "";
     closeModalButton.removeEventListener("click", openModalButtonClickHandler);
     modalMain.removeEventListener("click", windowClickHandler);
     document.removeEventListener("keydown", modalEscPressHandler);
@@ -249,6 +264,7 @@
 
   mainForm.addEventListener("submit", function (evt) {
     modalSuccess.classList.remove("hidden");
+    localStorageSet();
     evt.preventDefault();
     closemodalSuccessButton.addEventListener("click", closemodalSuccessButtonClickHandler);
     document.addEventListener("keydown", modalSuccessEscPressHandler);
@@ -257,4 +273,39 @@
     mainFormPhoneInput.value = "";
     mainFormTextInput.value = "";
   });
+
+  // Local storage
+
+  let isStorageSupport = true;
+  let storage = "";
+
+  try {
+    storage = localStorage.getItem("name");
+  } catch (err) {
+    isStorageSupport = false;
+  }
+
+  const localStorageSet = (evt) => {
+    if(!mainFormNameInput || !mainFormPhoneInput) {
+      evt.preventDefault();
+      console.log("Нужно ввести имя и телефон");
+    } else {
+     if(isStorageSupport) {
+       localStorage.setItem("login", mainFormNameInput.value);
+     }
+    }
+  };
+
+  const inputFocus = () => {
+   if (storage) {
+     modalNameInput.value = storage;
+     modalPhoneInput.focus();
+   } else {
+    modalNameInput.focus();
+   }
+  };
+
+
+
 })();
+
