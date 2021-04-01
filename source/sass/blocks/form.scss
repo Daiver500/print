@@ -19,6 +19,7 @@
   background-image: url("../img/plane.png");
   background-repeat: no-repeat;
   background-position: 0 50%;
+  background-size: 42%;
 }
 
 //.form__image-wrapper {
@@ -95,9 +96,18 @@ form textarea {
   color: $white;
 }
 
+form textarea {
+  resize: none;
+}
+
 .form__main-information input {
   min-width: 270px;
   padding: 16px;
+}
+
+form input:hover,
+form textarea:hover {
+  border: 1px solid black;
 }
 
 .form__main-text {
@@ -244,11 +254,15 @@ form button {
   }
 
   .form__main-data {
-    max-width: 320px;
+    max-width: 100%;
     display: flex;
     flex-direction: column;
     padding-left: 15px;
     padding-right: 15px;
+  }
+
+  .form__main-information input {
+    min-width: 100%;
   }
 
   .form__title {
@@ -269,7 +283,7 @@ form button {
   }
 
   .form__main-text {
-    width: 290px;
+    width: 100%;
   }
 
   .form__main-lowerpart {

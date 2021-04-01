@@ -1,5 +1,6 @@
 .footer {
   position: relative;
+  bottom: 0;
 }
 
 .footer::after {
@@ -40,7 +41,7 @@
 }
 
 .social__link svg {
-  color: $light-grey;
+  color: $social-icons;
 }
 
 .footer__logo svg {
@@ -133,6 +134,10 @@
   color: $light-black;
   margin-top: 0;
   margin-bottom: 0;
+}
+
+.contacts__link {
+  max-width: 175px;
 }
 
 .map__item a:hover,

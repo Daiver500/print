@@ -58,7 +58,7 @@
   list-style: none;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: min-content min-content;
   justify-items: center;
   grid-gap: 30px;
   padding-left: 0;
