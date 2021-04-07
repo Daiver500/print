@@ -1,4 +1,3 @@
-
 .form {
   background-color: $blue;
   overflow: hidden;
@@ -7,38 +6,33 @@
 .form__main {
   z-index: 1;
   position: relative;
+  padding-right: 83px;
 }
 
 .form__inner {
-  max-width: 1200px;
+  max-width: 1291px;
   display: flex;
-  padding-top: 96px;
-  padding-bottom: 114px;
+  padding-top: 91px;
+  padding-bottom: 111px;
   justify-content: space-between;
   position: relative;
   background-image: url("../img/plane.png");
   background-repeat: no-repeat;
-  background-position: 0 50%;
-  background-size: 42%;
+  background-position: 3px 42%;
+  background-size: 27vw;
 }
-
-//.form__image-wrapper {
- // z-index: 1;
- // overflow: hidden;
- // margin-top: 161px;
-//}
 
 .form__inner::before,
 .form__inner::after {
   position: absolute;
   background-repeat: no-repeat;
-  z-index: 0;
+  z-index: -1;
 }
 
 .form__inner::before {
   content: "";
-  left: -110px;
-  bottom: 77px;
+  left: -138px;
+  bottom: 87px;
   width: 636px;
   height: 640px;
   background-image: url("../img/form-polygon-big.svg");
@@ -46,8 +40,8 @@
 
 .form__inner::after {
   content: "";
-  left: -109px;
-  bottom: 71px;
+  left: -173px;
+  bottom: 86px;
   width: 373px;
   height: 378px;
   background-image: url("../img/form-polygon-small.svg");
@@ -62,6 +56,12 @@
   max-width: 570px;
 }
 
+.form__main-information {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
 .form__title,
 .form__text {
   color: $white;
@@ -69,8 +69,8 @@
 }
 
 .form__title {
-  margin-bottom: 7px;
-  font-family: RobotoCondensed, Arial, sans-serif;
+  margin-bottom: 11px;
+  font-family: "RobotoCondensed", Arial, sans-serif;
   font-size: 36px;
   line-height: 51px;
 }
@@ -79,14 +79,11 @@
   margin-bottom: 49px;
   font-size: 16px;
   line-height: 22px;
-}
-
-.form__main-information {
-  margin-bottom: 40px;
+  padding-left: 5px;
 }
 
 .form__main-request {
-  margin-bottom: 43px;
+  margin-bottom: 34px;
 }
 
 form input,
@@ -111,7 +108,7 @@ form textarea:hover {
 }
 
 .form__main-text {
-  width: 550px;
+  width: 570px;
   padding: 16px;
 }
 
@@ -123,7 +120,7 @@ form textarea::placeholder {
 }
 
 form button {
-  font-family: RobotoCondensed, Arial, sans-serif;
+  font-family: "RobotoCondensed", Arial, sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
@@ -132,7 +129,7 @@ form button {
   background-color: inherit;
   border: 1px solid $white;
   border-radius: 10px;
-  padding: 14px 45px;
+  padding: 14px 87px;
   cursor: pointer;
 }
 
@@ -157,6 +154,7 @@ form button {
   cursor: pointer;
   font-size: 14px;
   line-height: 16px;
+  left: 26px;
 }
 
 .form__main-checkbox {
@@ -169,7 +167,8 @@ form button {
   position: absolute;
   width: 16px;
   height: 16px;
-  left: -30px;
+  left: -35px;
+  top: 9px;
   background-image: url("../img/checkbox.svg");
   background-repeat: no-repeat;
 }
@@ -190,8 +189,8 @@ form button {
 
 .form__main::before {
   content: "";
-  left: 600px;
-  top: -73px;
+  left: 673px;
+  top: -50px;
   background-image: url("../img/form-polygon-left.svg");
   width: 262px;
   height: 262px;
@@ -199,8 +198,8 @@ form button {
 
 .form__main::after {
   content: "";
-  right: -580px;
-  bottom: 0;
+  right: -265px;
+  bottom: -78px;
   background-image: url("../img/form-polygon-right.svg");
   width: 436px;
   height: 373px;
@@ -208,10 +207,14 @@ form button {
 
 @media (max-width: $max-tablet-width) {
   .form__inner {
-    padding-top: 83px;
-    padding-bottom: 103px;
+    padding-top: 80px;
+    padding-bottom: 104px;
     justify-content: center;
     background-image: unset;
+  }
+
+  .form__main {
+    padding-right: 0;
   }
 
   .form__image-wrapper,
@@ -220,17 +223,30 @@ form button {
     display: none;
   }
 
+  .form__header {
+    padding-left: 5px;
+  }
+
+  .form__wrapper {
+    padding-left: 10px;
+  }
+
   .form__title {
     font-size: 32px;
     line-height: 45px;
+    margin-bottom: 17px;
   }
 
   .form__text {
     margin-bottom: 51px;
   }
 
+  .form__main-information {
+    min-width: 589px;
+  }
+
   .form__main-information input {
-    min-width: 290px;
+    min-width: 269px;
     padding: 16px;
   }
 
@@ -245,6 +261,15 @@ form button {
 
   form button {
     padding: 14px 65px;
+    min-width: 279px;
+  }
+
+  .form__main-request {
+    margin-bottom: 45px;
+  }
+
+  .form__main::after {
+    right: -395px;
   }
 }
 

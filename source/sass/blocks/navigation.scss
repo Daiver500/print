@@ -11,7 +11,7 @@
 .navigation__inner {
   display: flex;
   justify-content: space-between;
-  max-width: 1411px;
+  max-width: 1500px;
 }
 
 .navigation__logo svg,
@@ -26,6 +26,7 @@
 
 .navigation__text-main {
   padding-left: 16px;
+  padding-top: 7px;
 }
 
 .navigation__logo-text,
@@ -34,7 +35,7 @@
 }
 
 .navigation__logo-header {
-  font-family: RobotoCondensed, Arial, sans-serif;
+  font-family: "RobotoCondensed", Arial, sans-serif;
   font-weight: 700;
   color: $white;
   font-size: 25px;
@@ -42,7 +43,7 @@
 }
 
 .navigation__logo-text {
-  font-family: RobotoCondensed, Arial, sans-serif;
+  font-family: "RobotoCondensed", Arial, sans-serif;
   font-weight: 500;
   color: $grey;
   font-size: 12px;
@@ -52,22 +53,15 @@
 .navigation__contacts {
   display: grid;
   align-items: center;
-  padding-right: 70px;
   grid-template-columns: 1fr 1fr 1fr;
+  padding-right: 70px;
+  grid-gap: 39px;
 }
 
 .navigation__link {
   font-size: 16px;
   line-height: 18px;
   position: relative;
-}
-
-.navigation__link-mail {
-  margin-right: 122px;
-}
-
-.navigation__link-tel {
-  margin-right: 38px;
 }
 
 .navigation__link-mail:hover,
@@ -78,7 +72,7 @@
 }
 
 .navigation__button {
-  font-family: RobotoCondensed, Arial, sans-serif;
+  font-family: "RobotoCondensed", Arial, sans-serif;
   font-weight: 700;
   color: $white;
   font-size: 14px;
@@ -91,6 +85,8 @@
   text-transform: uppercase;
   border: 1px solid $white;
   text-align: center;
+  min-width: 180px;
+  letter-spacing: 1px;
 }
 
 .navigation__button:hover,
