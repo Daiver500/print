@@ -184,6 +184,10 @@
   padding-right: 9%;
 }
 
+.copyright__item {
+  margin-bottom: 0;
+}
+
 .copyright__item:nth-child(2) {
   padding-left: 5%;
 }
@@ -218,7 +222,11 @@
     right: 0;
     border: 1px solid $bottom-border;
     opacity: 0.2;
-    top: 85px;
+    top: 93px;
+  }
+
+  .footer::after {
+    bottom: 42px;
   }
 
   .footer__inner {
@@ -238,9 +246,21 @@
     max-width: 1920px;
   }
 
+  .footer__map,
+  .footer__contacts {
+    padding-top: 38px;
+  }
+
+  .footer__map {
+    padding-left: 12px;
+  }
+
   .copyright__list {
     padding-left: 15px;
     padding-right: 15px;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 39px;
+    margin-bottom: 0;
   }
 
   .footer__logowrapper {
@@ -270,8 +290,26 @@
     text-transform: uppercase;
   }
 
+  .map__title,
+  .contacts__title {
+    letter-spacing: 1px;
+  }
+
+  .map__title {
+    margin-bottom: 27px;
+  }
+
   .map__lists {
     flex-direction: column;
+  }
+
+  .contacts__information {
+    padding-left: 21px;
+    letter-spacing: -0.5px;
+  }
+
+  .contacts__title {
+    padding-left: 23px;
   }
 
   .copyright__item--hidden {
@@ -285,29 +323,57 @@
     flex-direction: column;
     margin-bottom: 25px;
     overflow: hidden;
+    padding: 47px 12px 24px;
   }
 
   .footer__social {
     flex-direction: column;
-    margin-bottom: 83px;
+    margin-bottom: 77px;
     align-items: center;
   }
 
+  .footer__logo {
+    padding-left: 0;
+  }
+
+  .footer__logowrapper {
+    margin-bottom: 26px;
+  }
+
+  .social__date {
+    margin-bottom: 37px;
+  }
+
   .footer::before {
-    top: 185px;
+    top: 259px;
   }
 
   .footer::after {
-    bottom: 80px;
+    bottom: 130px;
   }
 
   .footer__map {
-    margin-bottom: 50px;
+    margin-bottom: 18px;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+  .footer__contacts {
+    padding-top: 0;
   }
 
   .map__title,
   .contacts__title {
     margin-bottom: 36px;
+  }
+
+  .contacts__title,
+  .contacts__information {
+    padding-left: 0;
+  }
+
+  .contacts__information {
+    letter-spacing: 0;
   }
 
   .copyright__list {
@@ -318,6 +384,10 @@
     margin-bottom: 26px;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .copyright__item {
+    margin-bottom: 30px;
   }
 
   .map__button--open,
@@ -355,6 +425,6 @@
     left: 50%;
     transform: translateX(-50%);
     width: 767px;
-    top: -38px;
+    top: -14px;
   }
 }

@@ -44,6 +44,9 @@
   const footerContactsButtonClose = document.querySelector(".contacts__button--close");
   const footerContactsLists = document.querySelector(".contacts__information");
 
+  footerMapLists.classList.add("map__lists--hidden");
+  footerContactsLists.classList.add("contacts__information--hidden");
+
   const showFooterMapLists = () => {
     footerMapLists.classList.remove("map__lists--hidden");
     footerMapButtonOpen.classList.add("hidden");

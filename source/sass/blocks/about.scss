@@ -130,8 +130,8 @@
 
 @media (max-width: $max-mobile-width) {
   .advantages-and-about {
-    margin-bottom: 60px;
-    background-position: 20% 80%;
+    margin-bottom: 76px;
+    background-position: 22% 79%;
   }
 
   .about__inner {
@@ -150,5 +150,14 @@
   .about__title {
     font-size: 28px;
     line-height: 39px;
+    margin-bottom: 22px;
+  }
+
+  .about__text--tablet1 {
+    margin-bottom: 39px;
+  }
+
+  .about__text--tablet2 {
+    margin-bottom: 38px;
   }
 }

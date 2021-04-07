@@ -76,7 +76,7 @@ const htmlinclude = () => {
     .pipe(posthtml([
       include()
     ]))
-    .pipe(gulp.dest("build"))
+    .pipe(gulp.dest("build"));
 }
 
 exports.htmlinclude = htmlinclude;
@@ -133,11 +133,11 @@ const server = (done) => {
     ui: false,
   });
   done();
-}
+};
 
 exports.server = server;
 
-//HTML
+//HTML and JS
 
 const html = () => {
   return gulp.src(["source/*.html"
@@ -154,7 +154,7 @@ exports.html = html;
 const watcher = () => {
   gulp.watch("source/sass/**/*.scss", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", gulp.series("html", "htmlinclude", sync.reload));
-}
+};
 
 exports.default = gulp.series(
   styles, server, watcher

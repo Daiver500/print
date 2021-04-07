@@ -139,8 +139,8 @@
   }
 
   .information__inner::before {
-    right: -239px;
-    top: 13px;
+    right: -205px;
+    top: -73px;
     width: 501px;
     height: 501px;
     background-image: url("../img/information-polygon-big-tablet.svg");
@@ -148,10 +148,10 @@
 
   .information__inner::after {
     content: "";
-    right: 9px;
-    bottom: 150px;
+    right: 28px;
+    bottom: 218px;
     width: 294px;
-    height: 294px;
+    height: 300px;
     background-image: url("../img/information-polygon-small-tablet.svg");
   }
 
@@ -201,7 +201,7 @@
   .information__inner {
     flex-direction: column-reverse;
     padding-top: 215px;
-    padding-right: 10px;
+    padding-right: 16px;
     padding-bottom: 70px;
   }
 
@@ -225,8 +225,8 @@
   }
 
   .information__inner::before {
-    right: -358px;
-    top: 5px;
+    right: -359px;
+    top: 3px;
     width: 470px;
     height: 470px;
     background-image: url("../img/information-polygon-big-mobile.svg");
@@ -234,8 +234,8 @@
 
   .information__inner::after {
     content: "";
-    right: -133px;
-    top: 142px;
+    right: -128px;
+    top: 150px;
     width: 280px;
     height: 280px;
     background-image: url("../img/information-polygon-small-mobile.svg");
@@ -246,12 +246,24 @@
     line-height: 47px;
     z-index: 2;
     letter-spacing: 4px;
+    margin-bottom: 28px;
   }
 
   .information__text {
-    margin-bottom: 42px;
+    margin-bottom: 40px;
     font-size: 16px;
     line-height: 25px;
+    padding-left: 53px;
+  }
+
+  .information__text::before {
+    bottom: 58px;
+    left: 5px;
+  }
+
+  .information__button {
+    min-width: 287px;
+    margin-left: 6px;
   }
 
   .information__button-text {
