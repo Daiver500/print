@@ -1,6 +1,10 @@
 .form {
   background-color: $blue;
   overflow: hidden;
+  background-image: url("../img/test.png");
+  background-repeat: no-repeat;
+  background-position: 11% -57px;
+  background-size: 36vw;
 }
 
 .form__main {
@@ -16,13 +20,9 @@
   padding-bottom: 111px;
   justify-content: space-between;
   position: relative;
-  background-image: url("../img/plane.png");
-  background-repeat: no-repeat;
-  background-position: 3px 42%;
-  background-size: 27vw;
 }
 
-.form__inner::before,
+/*.form__inner::before,
 .form__inner::after {
   position: absolute;
   background-repeat: no-repeat;
@@ -44,7 +44,7 @@
   width: 373px;
   height: 378px;
   background-image: url("../img/form-polygon-small.svg");
-}
+}*/
 
 .form__image {
   width: 511px;
@@ -202,6 +202,16 @@ form button {
   background-image: url("../img/form-polygon-right.svg");
   width: 436px;
   height: 373px;
+}
+
+@media (max-width: 1439px) {
+  .form__main {
+    padding-right: 35px;
+  }
+
+  .form {
+    background-position: 3% 120px;
+  }
 }
 
 @media (max-width: $max-tablet-width) {
