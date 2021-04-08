@@ -182,6 +182,14 @@
   const modalMain = document.querySelector(".modal");
   const modalSuccess = document.querySelector(".modal-success");
   const closemodalSuccessButton = document.querySelector(".modal-success__close");
+  const modalMainInner = document.querySelector(".modal__inner");
+  const modalSuccessInner = document.querySelector(".modal-success__inner");
+
+  modalMain.classList.add("hidden");
+  modalMain.style.position = "fixed";
+  modalSuccess.style.position = "fixed";
+  modalMainInner.style.position = "fixed";
+  modalSuccessInner.style.position = "fixed";
 
   const modalEscPressHandler = (evt) => {
     if (evt.key === `Escape`) {

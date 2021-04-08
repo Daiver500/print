@@ -3,7 +3,7 @@
   display: flex;
   width: 490px;
   min-height: 605px;
-  position: fixed;
+  position: relative;
   top: calc(50% - 295px);
   right: 0;
   left: 0;
@@ -17,7 +17,7 @@
 
 .modal,
 .modal-success {
-  position: fixed;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -156,8 +156,15 @@
   display: none;
 }
 
-@media (max-width: $max-mobile-width) {
+@media (max-width: $max-tablet-width) {
+  .modal,
   .modal__inner,
+  .modal-success,
+  .modal-sucess__inner {
+    display: none;
+  }
+
+  /*.modal__inner,
   .modal-success__inner {
     width: 100%;
     justify-content: center;
@@ -173,5 +180,5 @@
     font-size: 16px;
     line-height: 22px;
     max-width: 320px;
-  }
+  }*/
 }
