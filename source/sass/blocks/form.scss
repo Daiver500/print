@@ -215,11 +215,15 @@ form button {
 }
 
 @media (max-width: $max-tablet-width) {
+  .form {
+    background-position: 3% 120px;
+    background-image: unset;
+  }
+
   .form__inner {
     padding-top: 80px;
     padding-bottom: 104px;
     justify-content: center;
-    background-image: unset;
   }
 
   .form__main {

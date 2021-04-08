@@ -24,7 +24,7 @@
 
 .information__header {
   margin-bottom: 28px;
-  font-family: "RobotoCondensed", Arial, sans-serif;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 80px;
   line-height: 94px;
@@ -87,7 +87,7 @@
 }
 
 .information__button {
-  font-family: RobotoCondensed, Arial, sans-serif;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
   color: $white;
   font-size: 16px;
@@ -101,6 +101,7 @@
   max-width: 408px;
   margin-left: 95px;
   letter-spacing: 1px;
+  text-align: center;
 }
 
 .information__button:hover,
@@ -127,7 +128,7 @@
   color: $blue;
 }
 
-.information__button-textmobile {
+.information__button-text-mobile {
   display: none;
 }
 
@@ -270,7 +271,7 @@
     display: none;
   }
 
-  .information__button-textmobile {
+  .information__button-text-mobile {
     display: block;
   }
 }

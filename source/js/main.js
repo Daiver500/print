@@ -61,14 +61,6 @@
     footerMapButtonClose.classList.add("hidden");
   };
 
-  const test = () => {
-    if (footerMapLists.classList.contains("map__lists--hidden")) {
-      showFooterMapLists();
-    } else {
-      hideFooterMapLists();
-    }
-  };
-
   const showFooterContactsLists = () => {
     footerContactsLists.classList.remove("contacts__information--hidden");
     footerContactsButtonOpen.classList.add("hidden");
@@ -81,27 +73,35 @@
     footerContactsButtonClose.classList.add("hidden");
   };
 
+  const openCloseFooterMenu = () => {
+    if (footerMapLists.classList.contains("map__lists--hidden")) {
+      showFooterMapLists();
+    } else {
+      hideFooterMapLists();
+    }
+    if (footerContactsLists.classList.contains("contacts__information--hidden")) {
+      showFooterContactsLists();
+    } else {
+      hideFooterContactsLists();
+    }
+  };
 
-  /*footerMapButtonOpen.addEventListener("click", showFooterMapLists);
-  footerMapButtonOpen.addEventListener("click", hideFooterContactsLists);
-  footerMapButtonClose.addEventListener("click", hideFooterMapLists);*/
-  footerContactsButtonOpen.addEventListener("click", showFooterContactsLists);
-  footerContactsButtonOpen.addEventListener("click", hideFooterMapLists);
-  footerContactsButtonClose.addEventListener("click", hideFooterContactsLists);
-
-  footerMap.addEventListener("click", test);
+  footerMap.addEventListener("click", openCloseFooterMenu);
   footerMap.addEventListener("click", hideFooterContactsLists);
-
-
+  footerContacts.addEventListener("click", openCloseFooterMenu);
+  footerContacts.addEventListener("click", hideFooterMapLists);
 
   // Маска
 
   let phoneInput = document.querySelector(".form__main-phone");
   let modalPhoneInput = document.querySelector(".modal__phone");
+
   //контроль количества введенных цифр
   let howDigits = str => str.split('').filter(el => /\d/.test(el)).length;
+
   //при фокусе подставляем +7(
   let whenFocusPhone = (evt) => evt.target.value = '+7(';
+
   //чтоб вводились только цифры
   let checkPhoneKey = (key) => key >= '0' && key <= '9';
   let checkNumPhone = (evt) => {
@@ -174,18 +174,14 @@
   const mainFormPhoneInput = document.querySelector(".form__main-phone");
   const mainFormTextInput = document.querySelector(".form__main-text");
   const modalForm = document.querySelector(".modal__form");
-  //const phoneInput = document.querySelector(".modal__phone");
   const nameInput = document.querySelector(".modal__name");
   const textInput = document.querySelector(".modal__text");
+  const modalPhone = document.querySelector(".modal__phone");
   const openModalButton = document.querySelector(".navigation__button");
   const closeModalButton = document.querySelector(".modal__close");
   const modalMain = document.querySelector(".modal");
-  //const modalInner = document.querySelector(".modal__inner");
   const modalSuccess = document.querySelector(".modal-success");
   const closemodalSuccessButton = document.querySelector(".modal-success__close");
-  //const modal-successInner = document.querySelector(".modal-success__inner");
-  const modalNameInput = document.querySelector(".modal__name");
-  const formNameCheckbox = document.querySelector(".form__main-checkbox");
 
   const modalEscPressHandler = (evt) => {
     if (evt.key === `Escape`) {
@@ -201,15 +197,10 @@
     }
   };
 
-  //const modalNameInputFocus = () => {
-   // modalNameInput.focus();
-  //};
-
-
   const openModal = () => {
     modalMain.classList.remove("hidden");
     document.body.style.overflow = "hidden";
-    mainFormNameInput.focus();
+    //mainFormNameInput.focus();
     inputFocus();
     closeModalButton.addEventListener("click", closeModalButtonClickHandler);
     modalMain.addEventListener("click", windowClickHandler);
@@ -274,7 +265,7 @@
   closemodalSuccessButton.addEventListener("click", closemodalSuccessButtonClickHandler);
 
   const formSendingHandler = (evt) => {
-    phoneInput.value = "";
+    modalPhone.value = "";
     nameInput.value = "";
     textInput.value = "";
     openSuccessModal();
@@ -282,8 +273,8 @@
   };
 
   mainForm.addEventListener("submit", function (evt) {
-    modalSuccess.classList.remove("hidden");
     localStorageSet();
+    modalSuccess.classList.remove("hidden");
     evt.preventDefault();
     closemodalSuccessButton.addEventListener("click", closemodalSuccessButtonClickHandler);
     document.addEventListener("keydown", modalSuccessEscPressHandler);
@@ -320,14 +311,10 @@
 
   const inputFocus = () => {
    if (storage) {
-     modalNameInput.value = storage;
-     modalPhoneInput.focus();
+     nameInput.value = storage;
+     modalPhone.focus();
    } else {
-    modalNameInput.focus();
+    nameInput.focus();
    }
   };
-
-
-
 })();
-

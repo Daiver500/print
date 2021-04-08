@@ -64,8 +64,8 @@
   padding-left: 11px;
 }
 
-.footer__logoheader,
-.footer__logotext {
+.footer__logo-header,
+.footer__logo-text {
   margin-top: 0;
   margin-bottom: 0;
 }
@@ -75,7 +75,7 @@
   margin-bottom: 49px;
 }
 
-.footer__logoheader {
+.footer__logo-header {
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
   color: $black;
@@ -84,7 +84,7 @@
   padding-top: 5px;
 }
 
-.footer__logotext {
+.footer__logo-text {
   font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 500;
   color: $grey;
@@ -92,7 +92,7 @@
   line-height: 14px;
 }
 
-.footer__textmain {
+.footer__text-main {
   padding-left: 17px;
 }
 
