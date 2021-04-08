@@ -167,6 +167,7 @@
     modalPhoneInput.selectionStart = 4;
   });
 
+
   // Модальное окно
 
   const mainForm = document.querySelector(".form__main-data");
@@ -208,7 +209,6 @@
   const openModal = () => {
     modalMain.classList.remove("hidden");
     document.body.style.overflow = "hidden";
-    //mainFormNameInput.focus();
     inputFocus();
     closeModalButton.addEventListener("click", closeModalButtonClickHandler);
     modalMain.addEventListener("click", windowClickHandler);
@@ -281,9 +281,9 @@
   };
 
   mainForm.addEventListener("submit", function (evt) {
-    localStorageSet();
     modalSuccess.classList.remove("hidden");
     evt.preventDefault();
+    localStorageSet();
     closemodalSuccessButton.addEventListener("click", closemodalSuccessButtonClickHandler);
     document.addEventListener("keydown", modalSuccessEscPressHandler);
     document.addEventListener("click", windowSuccessClickHandler);
@@ -298,7 +298,7 @@
   let storage = "";
 
   try {
-    storage = localStorage.getItem("name");
+    storage = localStorage.getItem("login");
   } catch (err) {
     isStorageSupport = false;
   }
