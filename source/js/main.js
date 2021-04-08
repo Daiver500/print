@@ -43,6 +43,8 @@
   const footerContactsButtonOpen = document.querySelector(".contacts__button--open");
   const footerContactsButtonClose = document.querySelector(".contacts__button--close");
   const footerContactsLists = document.querySelector(".contacts__information");
+  const footerMap = document.querySelector(".footer__map");
+  const footerContacts = document.querySelector(".footer__contacts");
 
   footerMapLists.classList.add("map__lists--hidden");
   footerContactsLists.classList.add("contacts__information--hidden");
@@ -59,6 +61,14 @@
     footerMapButtonClose.classList.add("hidden");
   };
 
+  const test = () => {
+    if (footerMapLists.classList.contains("map__lists--hidden")) {
+      showFooterMapLists();
+    } else {
+      hideFooterMapLists();
+    }
+  };
+
   const showFooterContactsLists = () => {
     footerContactsLists.classList.remove("contacts__information--hidden");
     footerContactsButtonOpen.classList.add("hidden");
@@ -72,10 +82,16 @@
   };
 
 
-  footerMapButtonOpen.addEventListener("click", showFooterMapLists);
-  footerMapButtonClose.addEventListener("click", hideFooterMapLists);
+  /*footerMapButtonOpen.addEventListener("click", showFooterMapLists);
+  footerMapButtonOpen.addEventListener("click", hideFooterContactsLists);
+  footerMapButtonClose.addEventListener("click", hideFooterMapLists);*/
   footerContactsButtonOpen.addEventListener("click", showFooterContactsLists);
+  footerContactsButtonOpen.addEventListener("click", hideFooterMapLists);
   footerContactsButtonClose.addEventListener("click", hideFooterContactsLists);
+
+  footerMap.addEventListener("click", test);
+  footerMap.addEventListener("click", hideFooterContactsLists);
+
 
 
   // Маска
@@ -291,12 +307,15 @@
   const localStorageSet = (evt) => {
     if(!mainFormNameInput || !mainFormPhoneInput) {
       evt.preventDefault();
-      console.log("Нужно ввести имя и телефон");
+      mainFormNameInput.setCustomValidity("Нужно ввести имя");
+      mainFormPhoneInput.setCustomValidity("Нужно ввести телефон");
     } else {
      if(isStorageSupport) {
        localStorage.setItem("login", mainFormNameInput.value);
      }
     }
+    mainFormNameInput.reportValidity();
+    mainFormPhoneInput.reportValidity();
   };
 
   const inputFocus = () => {

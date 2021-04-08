@@ -69,7 +69,7 @@
 
 .form__title {
   margin-bottom: 11px;
-  font-family: "RobotoCondensed", Arial, sans-serif;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
   font-size: 36px;
   line-height: 51px;
 }
@@ -119,7 +119,7 @@ form textarea::placeholder {
 }
 
 form button {
-  font-family: "RobotoCondensed", Arial, sans-serif;
+  font-family: "RobotoCondensed", "Arial", sans-serif;
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
