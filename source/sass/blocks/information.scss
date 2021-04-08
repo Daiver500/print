@@ -226,8 +226,8 @@
   }
 
   .information__inner::before {
-    right: -359px;
-    top: 3px;
+    right: -324px;
+    top: -70px;
     width: 470px;
     height: 470px;
     background-image: url("../img/information-polygon-big-mobile.svg");
@@ -235,8 +235,8 @@
 
   .information__inner::after {
     content: "";
-    right: -128px;
-    top: 150px;
+    right: -110px;
+    top: 81px;
     width: 280px;
     height: 286px;
     background-image: url("../img/information-polygon-small-mobile.svg");

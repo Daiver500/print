@@ -3,7 +3,7 @@
 }
 
 .catalog__inner {
-  max-width: 1190px;
+  max-width: 1250px;
   padding-top: 88px;
   padding-bottom: 109px;
 }
@@ -69,10 +69,7 @@
 
 @media (max-width: $max-tablet-width) {
   .catalog__inner {
-    padding-top: 50px;
-    padding-bottom: 62px;
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 50px 21px 62px 27px;
   }
 
   .catalog__list {
@@ -93,9 +90,11 @@
   .catalog__title {
     font-size: 32px;
     line-height: 45px;
-    max-width: 625px;
+    //max-width: 625px;
     text-align: left;
     margin-bottom: 49px;
+    padding-left: 1%;
+    padding-right: 13%;
   }
 
   .catalog__text {
@@ -116,6 +115,8 @@
     font-size: 28px;
     line-height: 39px;
     margin-bottom: 42px;
+    padding-left: 3%;
+    padding-right: 2%;
   }
 
   .catalog__wrapper {

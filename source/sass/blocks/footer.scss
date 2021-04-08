@@ -38,7 +38,7 @@
   grid-gap: 15px;
   max-height: 27px;
   position: relative;
-  left: -42px;
+  left: -35px;
   top: 2px;
 }
 
@@ -61,7 +61,7 @@
 
 .footer__logo {
   display: flex;
-  padding-left: 11px;
+  padding-left: 27px;
 }
 
 .footer__logo-header,
@@ -103,12 +103,17 @@
 .map__title,
 .contacts__title {
   margin-top: 0;
-  margin-bottom: 25px;
   font-family: "RobotoCondensed", "Arial", sans-serif;
   color: $light-black;
   font-size: 15px;
   line-height: 16px;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 28px;
+}
+
+.contacts__title {
+  padding-left: 23px;
 }
 
 .map__lists {
@@ -152,10 +157,6 @@
   max-width: 175px;
 }
 
-.contacts__title {
-  padding-left: 30px;
-}
-
 .map__item a:hover,
 .map__item a:focus,
 .contacts__link:hover,
@@ -177,7 +178,7 @@
   display: grid;
   grid-template-columns: 150px 1fr 1fr 1fr;
   list-style: none;
-  margin-top: 14px;
+  margin-top: 10px;
   margin-bottom: 14px;
   position: relative;
   padding-left: 5%;
@@ -265,6 +266,10 @@
 
   .footer__logowrapper {
     margin-bottom: 0;
+  }
+
+  .footer__logo {
+    padding-left: 8px;
   }
 
   .social__list {
