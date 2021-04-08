@@ -183,6 +183,8 @@
   const modalSuccess = document.querySelector(".modal-success");
   const closemodalSuccessButton = document.querySelector(".modal-success__close");
 
+  modalMain.classList.add("hidden");
+
   const modalEscPressHandler = (evt) => {
     if (evt.key === `Escape`) {
       closeModal();
