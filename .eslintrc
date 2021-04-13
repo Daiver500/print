@@ -1,4 +1,3 @@
-{
 root: true
 
 env:
@@ -6,4 +5,4 @@ env:
 
 extends:
   "htmlacademy/es5"
-}
+
