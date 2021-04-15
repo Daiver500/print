@@ -11,40 +11,40 @@
   const footerMap = document.querySelector(".footer__map");
   const footerContacts = document.querySelector(".footer__contacts");
 
-  footerMapLists.classList.add("lists__hidden");
-  footerContactsLists.classList.add("lists__hidden");
+  footerMapLists.classList.add("map__lists--hidden");
+  footerContactsLists.classList.add("contacts__information--hidden");
 
   const showFooterMapLists = () => {
-    footerMapLists.classList.remove("lists__hidden");
+    footerMapLists.classList.remove("map__lists--hidden");
     footerMapButtonOpen.classList.add("hidden");
     footerMapButtonClose.classList.remove("hidden");
   };
 
   const hideFooterMapLists = () => {
-    footerMapLists.classList.add("lists__hidden");
+    footerMapLists.classList.add("map__lists--hidden");
     footerMapButtonOpen.classList.remove("hidden");
     footerMapButtonClose.classList.add("hidden");
   };
 
   const showFooterContactsLists = () => {
-    footerContactsLists.classList.remove("lists__hidden");
+    footerContactsLists.classList.remove("contacts__information--hidden");
     footerContactsButtonOpen.classList.add("hidden");
     footerContactsButtonClose.classList.remove("hidden");
   };
 
   const hideFooterContactsLists = () => {
-    footerContactsLists.classList.add("lists__hidden");
+    footerContactsLists.classList.add("contacts__information--hidden");
     footerContactsButtonOpen.classList.remove("hidden");
     footerContactsButtonClose.classList.add("hidden");
   };
 
   const openCloseFooterMenu = () => {
-    if (footerMapLists.classList.contains("lists__hidden")) {
+    if (footerMapLists.classList.contains("map__lists--hidden")) {
       showFooterMapLists();
     } else {
       hideFooterMapLists();
     }
-    if (footerContactsLists.classList.contains("lists__hidden")) {
+    if (footerContactsLists.classList.contains("contacts__information--hidden")) {
       showFooterContactsLists();
     } else {
       hideFooterContactsLists();
@@ -56,30 +56,84 @@
   footerContacts.addEventListener("click", openCloseFooterMenu);
   footerContacts.addEventListener("click", hideFooterMapLists);
 
-  // Маска
+  /*// Маска
 
-  const phoneInput = document.querySelector(".form__main-phone");
-  const modalPhone = document.querySelector(".modal__phone");
+  let phoneInput = document.querySelector(".form__main-phone");
+  let modalPhoneInput = document.querySelector(".modal__phone");
 
-  let maskOptions = {
-    mask: '+{7}(000)000-00-00'
+  //контроль количества введенных цифр
+  let howDigits = str => str.split('').filter(el => /\d/.test(el)).length;
+
+  //при фокусе подставляем +7(
+  let whenFocusPhone = (evt) => evt.target.value = '+7(';
+
+  //чтоб вводились только цифры
+  let checkPhoneKey = (key) => key >= '0' && key <= '9';
+  let checkNumPhone = (evt) => {
+    if (!checkPhoneKey(evt.target.value[evt.target.value.length - 1]) || howDigits(evt.target.value) > 11) {
+      evt.target.value = evt.target.value.slice(0, -1);
+    }
+    if (evt.target.value.length === 6) {
+      evt.target.value += ')';
+    }
+    if (evt.target.value.length === 2) {
+      evt.target.value += '(';
+    }
   };
-  let formMask = IMask(phoneInput, maskOptions);
-  let modalMask = IMask(modalPhone, maskOptions);
 
   const checkPhoneInput = () => {
-    if (phoneInput.value.length < 16) {
+    if (phoneInput.value.length < 14) {
       phoneInput.setCustomValidity("Номер должен быть из 10 цифр");
     } else {
-      phoneInput.setCustomValidity("");
+      phoneInput.setCustomValidity(``);
     }
     phoneInput.reportValidity();
   };
 
-  phoneInput.addEventListener("input", checkPhoneInput);
+  const checkModalPhoneInput = () => {
+    if (modalPhoneInput.value.length < 14) {
+      modalPhoneInput.setCustomValidity("Номер должен быть из 10 цифр");
+    } else {
+      modalPhoneInput.setCustomValidity(``);
+    }
+    modalPhoneInput.reportValidity();
+  };
+
+  const backspaceClickHandler = (evt) => {
+    if (evt.key === `Backspace`) {
+      phoneInput.value = '';
+      phoneInput.value += '+7(';
+    }
+  };
+
+  const backspaceModalClickHandler = (evt) => {
+    if (evt.key === `Backspace`) {
+      modalPhoneInput.value = '';
+      modalPhoneInput.value += '+7(';
+    }
+  };
 
 
-// Модальное окно
+  phoneInput.addEventListener('input', checkPhoneInput);
+  phoneInput.addEventListener('focus', whenFocusPhone);
+  phoneInput.addEventListener('input', checkNumPhone);
+  phoneInput.addEventListener('keydown', checkPhoneKey);
+  phoneInput.addEventListener('keydown', backspaceClickHandler);
+  phoneInput.addEventListener("click", function () {
+    phoneInput.selectionStart = 4;
+  });
+
+  modalPhoneInput.addEventListener('input', checkModalPhoneInput);
+  modalPhoneInput.addEventListener('focus', whenFocusPhone);
+  modalPhoneInput.addEventListener('input', checkNumPhone);
+  modalPhoneInput.addEventListener('keydown', checkPhoneKey);
+  modalPhoneInput.addEventListener('keydown', backspaceModalClickHandler);
+  modalPhoneInput.addEventListener("click", function () {
+    modalPhoneInput.selectionStart = 4;
+  });*/
+
+
+  // Модальное окно
 
   const mainForm = document.querySelector(".form__main-data");
   const mainFormNameInput = document.querySelector(".form__main-name");
@@ -88,6 +142,7 @@
   const modalForm = document.querySelector(".modal__form");
   const nameInput = document.querySelector(".modal__name");
   const textInput = document.querySelector(".modal__text");
+  const modalPhone = document.querySelector(".modal__phone");
   const openModalButton = document.querySelector(".navigation__button");
   const closeModalButton = document.querySelector(".modal__close");
   const modalMain = document.querySelector(".modal");
@@ -143,13 +198,8 @@
     closeModal();
   };
 
-
   openModalButton.addEventListener("click", openModalButtonClickHandler);
-
-
-
   closeModalButton.addEventListener("click", closeModalButtonClickHandler);
-
 
 
   const modalSuccessEscPressHandler = (evt) => {
@@ -185,9 +235,7 @@
     closeSuccessModal();
   };
 
-
   closemodalSuccessButton.addEventListener("click", closemodalSuccessButtonClickHandler);
-
 
   const formSendingHandler = (evt) => {
     modalPhone.value = "";
@@ -197,7 +245,7 @@
     evt.preventDefault();
   };
 
-    mainForm.addEventListener("submit", function (evt) {
+  mainForm.addEventListener("submit", function (evt) {
     modalSuccess.classList.remove("hidden");
     evt.preventDefault();
     localStorageSet();
@@ -208,7 +256,6 @@
     mainFormPhoneInput.value = "";
     mainFormTextInput.value = "";
   });
-
 
   // Local storage
 
