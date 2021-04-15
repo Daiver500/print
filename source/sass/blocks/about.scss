@@ -23,13 +23,13 @@
   max-width: 985px;
 }
 
-.about__title,
-.about__text {
+.about__information h2,
+.about__information p {
   margin-top: 0;
   color: $light-grey;
 }
 
-.about__title {
+.about__information h2 {
   margin-bottom: 18px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 36px;
@@ -47,7 +47,7 @@
   display: none;
 }
 
-.about__button {
+.about__information button {
   text-transform: uppercase;
   padding: 14px 52px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -61,8 +61,8 @@
   cursor: pointer;
 }
 
-.about__button:hover,
-.about__button:focus {
+.about__information button:hover,
+.about__information button:focus {
   background-color: $blue;
   color: $white;
 }
@@ -90,13 +90,13 @@
     max-width: 532px;
   }
 
-  .about__title {
+  .about__information h2 {
     margin-bottom: 27px;
     font-size: 32px;
     line-height: 42px;
   }
 
-  .about__text {
+  .about__information p {
     margin-bottom: 34px;
     font-size: 16px;
     line-height: 22px;
@@ -123,7 +123,7 @@
     margin-bottom: 29px;
   }
 
-  .about__button {
+  .about__information button {
     padding: 14px 54px;
   }
 }
@@ -147,7 +147,7 @@
     justify-items: unset;
   }
 
-  .about__title {
+  .about__information h2 {
     font-size: 28px;
     line-height: 39px;
     margin-bottom: 22px;

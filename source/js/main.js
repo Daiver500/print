@@ -60,6 +60,7 @@
 
   const phoneInput = document.querySelector(".form__main-phone");
   const modalPhone = document.querySelector(".modal__phone");
+  const maxPhoneNumber = 16;
 
   let maskOptions = {
     mask: '+{7}(000)000-00-00'
@@ -68,7 +69,7 @@
   let modalMask = IMask(modalPhone, maskOptions);
 
   const checkPhoneInput = () => {
-    if (phoneInput.value.length < 16) {
+    if (phoneInput.value.length < maxPhoneNumber) {
       phoneInput.setCustomValidity("Номер должен быть из 10 цифр");
     } else {
       phoneInput.setCustomValidity("");
@@ -76,7 +77,19 @@
     phoneInput.reportValidity();
   };
 
+  const checkModalPhoneInput = () => {
+    if (modalPhone.value.length < maxPhoneNumber) {
+      modalPhone.setCustomValidity("Номер должен быть из 10 цифр");
+    } else {
+      modalPhone.setCustomValidity("");
+    }
+    modalPhone.reportValidity();
+  };
+
+  if (phoneInput || modalPhone) {
   phoneInput.addEventListener("input", checkPhoneInput);
+  modalPhone.addEventListener("input", checkModalPhoneInput);
+  }
 
 
 // Модальное окно
@@ -143,12 +156,14 @@
     closeModal();
   };
 
-
+  if (openModalButton) {
   openModalButton.addEventListener("click", openModalButtonClickHandler);
+  }
 
 
-
+  if (closeModalButton) {
   closeModalButton.addEventListener("click", closeModalButtonClickHandler);
+  }
 
 
 

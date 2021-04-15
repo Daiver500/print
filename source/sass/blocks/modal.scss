@@ -63,6 +63,9 @@
   padding: 16px;
   margin-bottom: 30px;
   min-width: 380px;
+  background-color: $light-blue;
+  border: 0;
+  color: $white;
 }
 
 .modal__form input::placeholder,
