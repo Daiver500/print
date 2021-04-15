@@ -1257,7 +1257,7 @@ form button {
   display: flex;
   justify-content: space-between; }
 
-.form__main-checkboxlabel {
+.form__main-checkbox-label {
   max-width: 250px;
   color: #ffffff;
   display: flex;
@@ -1274,7 +1274,7 @@ form button {
      -moz-appearance: none;
           appearance: none; }
 
-.form__main-checkboxtext {
+.form__main-checkbox-text {
   position: absolute;
   width: 16px;
   height: 16px;
@@ -1282,7 +1282,7 @@ form button {
   background-image: url("../img/checkbox.svg");
   background-repeat: no-repeat; }
 
-.form__main-checkbox:checked + .form__main-checkboxtext {
+.form__main-checkbox:checked + .form__main-checkbox-text {
   background-image: url("../img/checkbox-checked.svg");
   background-repeat: no-repeat; }
 
@@ -1362,9 +1362,9 @@ form button {
     width: 290px; }
   .form__main-lowerpart {
     flex-direction: column; }
-  .form__main-checkboxtext {
+  .form__main-checkbox-text {
     left: 5px; }
-  .form__main-checkboxlabel {
+  .form__main-checkbox-label {
     padding-left: 30px; } }
 
 .footer {

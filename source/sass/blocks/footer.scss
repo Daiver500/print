@@ -76,7 +76,7 @@
 }
 
 .footer__logo-header {
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 700;
   color: $black;
   font-size: 25px;
@@ -85,7 +85,7 @@
 }
 
 .footer__logo-text {
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 500;
   color: $grey;
   font-size: 12px;
@@ -103,7 +103,7 @@
 .map__title,
 .contacts__title {
   margin-top: 0;
-  font-family: "RobotoCondensed", "Arial", sans-serif;
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   color: $light-black;
   font-size: 15px;
   line-height: 16px;
@@ -413,8 +413,7 @@
     background-color: inherit;
   }
 
-  .map__lists--hidden,
-  .contacts__information--hidden {
+  .lists__hidden {
     display: none;
   }
 

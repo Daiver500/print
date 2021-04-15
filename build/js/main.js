@@ -1,40 +1,5 @@
 (function () {
 
-  const informationScrollButtons = document.querySelectorAll(".scroll");
-  const advantages = document.querySelector(".advantages");
-  const form = document.querySelector(".form__inner");
-
-  //Плавная прокрутка
-
-  const scrollButtonsClickHandler = (evt) => {
-    switch (evt.target.id) {
-      case "information-button":
-        form.scrollIntoView({
-          behavior: "smooth"
-        });
-        break;
-        case "information-button-text":
-        form.scrollIntoView({
-          behavior: "smooth"
-        });
-        break;
-        case "information-button-text-mobile":
-          form.scrollIntoView({
-            behavior: "smooth"
-          });
-          break;
-      case "information-scroll":
-        advantages.scrollIntoView({
-          behavior: "smooth"
-        });
-        break;
-    }
-  };
-
-  informationScrollButtons.forEach((button) => {
-    button.addEventListener("click", scrollButtonsClickHandler);
-  });
-
   // Подвал мобильная версия
 
   const footerMapButtonOpen = document.querySelector(".map__button--open");
@@ -91,7 +56,7 @@
   footerContacts.addEventListener("click", openCloseFooterMenu);
   footerContacts.addEventListener("click", hideFooterMapLists);
 
-  // Маска
+  /*// Маска
 
   let phoneInput = document.querySelector(".form__main-phone");
   let modalPhoneInput = document.querySelector(".modal__phone");
@@ -165,7 +130,7 @@
   modalPhoneInput.addEventListener('keydown', backspaceModalClickHandler);
   modalPhoneInput.addEventListener("click", function () {
     modalPhoneInput.selectionStart = 4;
-  });
+  });*/
 
 
   // Модальное окно
@@ -309,20 +274,20 @@
       mainFormNameInput.setCustomValidity("Нужно ввести имя");
       mainFormPhoneInput.setCustomValidity("Нужно ввести телефон");
     } else {
-     if(isStorageSupport) {
-       localStorage.setItem("login", mainFormNameInput.value);
-     }
+      if(isStorageSupport) {
+        localStorage.setItem("login", mainFormNameInput.value);
+      }
     }
     mainFormNameInput.reportValidity();
     mainFormPhoneInput.reportValidity();
   };
 
   const inputFocus = () => {
-   if (storage) {
-     nameInput.value = storage;
-     modalPhone.focus();
-   } else {
-    nameInput.focus();
-   }
+    if (storage) {
+      nameInput.value = storage;
+      modalPhone.focus();
+    } else {
+      nameInput.focus();
+    }
   };
 })();

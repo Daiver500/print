@@ -21,6 +21,7 @@
     "gulp-svgstore": "^7.0.1",
     "gulp-uglify": "^3.0.2",
     "gulp-webp": "^4.0.1",
+    "imask": "^6.0.7",
     "node-sass": "4.14.1",
     "posthtml-include": "^1.4.3",
     "stylelint": "13.6.1",
@@ -31,7 +32,7 @@
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
     "build": "gulp build",
-    "start": "gulp "
+    "start": "gulp"
   },
   "browserslist": [
     "last 2 versions",
