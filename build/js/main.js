@@ -51,10 +51,15 @@
     }
   };
 
+  if (footerMap) {
   footerMap.addEventListener("click", openCloseFooterMenu);
   footerMap.addEventListener("click", hideFooterContactsLists);
+  }
+
+  if (footerContacts) {
   footerContacts.addEventListener("click", openCloseFooterMenu);
   footerContacts.addEventListener("click", hideFooterMapLists);
+  }
 
   // Маска
 
