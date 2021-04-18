@@ -4,8 +4,8 @@
 }
 
 .navigation {
-  padding-top: 40px;
-  padding-bottom: 173px;
+  padding-top: 38px;
+  padding-bottom: 169px;
 }
 
 .navigation__inner {
@@ -181,8 +181,12 @@
   }
 
   .navigation__contacts-tablet {
-    padding-right: 0;
+    padding-right: 4px;
     padding-top: 5px;
+  }
+
+  .navigation__contacts-tablet-mail {
+    padding-right: 17px;
   }
 
   .navigation__logo svg {

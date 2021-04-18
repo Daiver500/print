@@ -38,7 +38,7 @@
   grid-gap: 15px;
   max-height: 27px;
   position: relative;
-  left: -35px;
+  left: -43px;
   top: 2px;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .footer__logo {
-  display: flex;
+  //display: flex;
   padding-left: 27px;
 }
 
@@ -72,7 +72,7 @@
 
 .footer__logowrapper {
   display: flex;
-  margin-bottom: 49px;
+  margin-bottom: 45px;
 }
 
 .footer__logo-header {
@@ -108,12 +108,16 @@
   font-size: 15px;
   line-height: 16px;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 }
 
 .contacts__title {
+  letter-spacing: 1px;
   padding-left: 23px;
+}
+
+.map__title {
+  letter-spacing: 0.5px;
 }
 
 .map__lists {
@@ -227,7 +231,7 @@
   }
 
   .footer::after {
-    bottom: 42px;
+    bottom: 45px;
   }
 
   .footer__inner {
@@ -333,7 +337,7 @@
 
   .footer__social {
     flex-direction: column;
-    margin-bottom: 77px;
+    margin-bottom: 73px;
     align-items: center;
   }
 
@@ -342,11 +346,11 @@
   }
 
   .footer__logowrapper {
-    margin-bottom: 26px;
+    margin-bottom: 18px;
   }
 
   .social__date {
-    margin-bottom: 37px;
+    margin-bottom: 42px;
   }
 
   .footer::before {
@@ -429,6 +433,11 @@
     left: 50%;
     transform: translateX(-50%);
     width: 767px;
-    top: -14px;
+    top: -20px;
+  }
+
+  .social__list {
+    left: -1px;
+    top: -12px;
   }
 }

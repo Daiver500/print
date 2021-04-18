@@ -47,7 +47,7 @@
   display: none;
 }
 
-.about__information button {
+.about__information a {
   text-transform: uppercase;
   padding: 14px 52px;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -61,8 +61,8 @@
   cursor: pointer;
 }
 
-.about__information button:hover,
-.about__information button:focus {
+.about__information a:hover,
+.about__information a:focus {
   background-color: $blue;
   color: $white;
 }
@@ -97,7 +97,6 @@
   }
 
   .about__information p {
-    margin-bottom: 34px;
     font-size: 16px;
     line-height: 22px;
   }
@@ -123,8 +122,9 @@
     margin-bottom: 29px;
   }
 
-  .about__information button {
+  .about__information a {
     padding: 14px 54px;
+    margin-top: 10px;
   }
 }
 
