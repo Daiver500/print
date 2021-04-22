@@ -270,17 +270,19 @@
 
   // Чекбокс проверка
 
-
-
   const checkbox = document.querySelector(".form__main-checkbox");
   const label = document.querySelector(".form__main-checkbox-label");
+  const modalCheckbox = document.querySelector(".modal__checkbox-text");
+  const modalLabel  = document.querySelector(".modal__checkbox-label");
 
-  if (!checkbox.checked) {
-    label.style.opacity = "0.5";
-    checkbox.style.opacity = "0.5";
-  } else if (checkbox.style.backgroundImage =  "url("../img/checkbox.svg")") {
-    label.style.opacity = "1";
-    checkbox.style.opacity = "1";
-  }
+  const checkboxClicker = () => {
+  checkbox.addEventListener("click", function () {
+    label.classList.toggle("checkbox-toggle");
+  });
+  modalCheckbox.addEventListener("click", function () {
+    modalLabel.classList.toggle("checkbox-toggle");
+  });
+ };
+  checkboxClicker();
 
 })();
