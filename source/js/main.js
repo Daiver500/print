@@ -263,4 +263,21 @@
       nameInput.focus();
     }
   };
+
+
+  const checkbox = document.querySelector(".form__main-checkbox");
+  const label = document.querySelector(".form__main-checkbox-label");
+  const modalCheckbox = document.querySelector(".modal__checkbox-text");
+  const modalLabel  = document.querySelector(".modal__checkbox-label");
+
+  const checkboxClicker = () => {
+  checkbox.addEventListener("click", function () {
+    label.classList.toggle("checkbox-toggle");
+  });
+  modalCheckbox.addEventListener("click", function () {
+    modalLabel.classList.toggle("checkbox-toggle");
+  });
+ };
+  checkboxClicker();
+
 })();

@@ -78,11 +78,11 @@
   }
 
   .about__image-wrapper {
-    max-width: 208px;
+    max-width: 205px;
   }
 
   .about__image {
-    width: 207px;
+    width: 230px;
     height: 362px;
   }
 
@@ -158,6 +158,13 @@
   }
 
   .about__text--tablet2 {
-    margin-bottom: 38px;
+    margin-bottom: 37px;
+  }
+
+  .about__information a {
+    padding: 14px 50px;
+    margin-top: 10px;
+    text-align: center;
+    letter-spacing: 0.5px;
   }
 }

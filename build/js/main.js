@@ -10,12 +10,9 @@
   const footerContactsLists = document.querySelector(".contacts__information");
   const footerMap = document.querySelector(".footer__map");
   const footerContacts = document.querySelector(".footer__contacts");
-  const mediaQuery = window.matchMedia('(max-width: 767px)');
 
   footerMapLists.classList.add("lists__hidden");
   footerContactsLists.classList.add("lists__hidden");
-
-  if (mediaQuery.matches) {
 
   const showFooterMapLists = () => {
     footerMapLists.classList.remove("lists__hidden");
@@ -63,7 +60,6 @@
   footerContacts.addEventListener("click", openCloseFooterMenu);
   footerContacts.addEventListener("click", hideFooterMapLists);
   }
-}
 
   // Маска
 
@@ -118,6 +114,7 @@
   const modalMainInner = document.querySelector(".modal__inner");
   const modalSuccessInner = document.querySelector(".modal-success__inner");
 
+  modalMain.classList.add("hidden");
   modalMain.style.position = "fixed";
   modalSuccess.style.position = "fixed";
   modalMainInner.style.position = "fixed";
@@ -156,8 +153,7 @@
     modalForm.removeEventListener("submit", formSendingHandler);
   };
 
-  const openModalButtonClickHandler = (evt) => {
-    evt.preventDefault();
+  const openModalButtonClickHandler = () => {
     openModal();
   };
 
@@ -268,7 +264,6 @@
     }
   };
 
-  // Чекбокс проверка
 
   const checkbox = document.querySelector(".form__main-checkbox");
   const label = document.querySelector(".form__main-checkbox-label");

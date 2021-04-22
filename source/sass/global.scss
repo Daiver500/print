@@ -37,12 +37,15 @@ body {
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
-  height: 100vh;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .include {
   display: none;
 }
 
+.main {
+  flex-grow: 1;
+}
