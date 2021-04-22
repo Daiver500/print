@@ -62,6 +62,14 @@
   position: relative;
 }
 
+.navigation__link-mail {
+  max-width: 96px;
+}
+
+.navigation__link-tel {
+  max-width: 184px;
+}
+
 .navigation__link-mail:hover,
 .navigation__link-tel:hover,
 .navigation__link-mail:focus,

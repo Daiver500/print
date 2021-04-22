@@ -68,6 +68,10 @@
   color: $white;
 }
 
+.modal__form textarea {
+  resize: none;
+}
+
 .modal__form input::placeholder,
 .modal__form textarea::placeholder {
   color: $white;
@@ -155,8 +159,20 @@
   background-repeat: no-repeat;
 }
 
+.modal__lowerpart {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
 .hidden {
   display: none;
+}
+
+.modal input:hover,
+.modal textarea:hover,
+.modal input:focus,
+.modal textarea:focus {
+  border: 1px solid $black;
 }
 
 @media (max-width: $max-tablet-width) {

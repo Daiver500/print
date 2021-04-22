@@ -139,6 +139,7 @@
 .form__main-lowerpart {
   display: flex;
   justify-content: space-between;
+  flex-direction: row-reverse;
 }
 
 .form__main-checkbox-label {
@@ -162,7 +163,7 @@
 
 .form__main-checkbox-text {
   position: absolute;
-  width: 16px;
+  width: 18px;
   height: 16px;
   left: -35px;
   top: 9px;
