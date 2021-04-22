@@ -153,7 +153,8 @@
     modalForm.removeEventListener("submit", formSendingHandler);
   };
 
-  const openModalButtonClickHandler = () => {
+  const openModalButtonClickHandler = (evt) => {
+    evt.preventDefault();
     openModal();
   };
 
